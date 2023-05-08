@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade'
 const Section1 = () => {
   return (
     <div  className="section1 bg-no-repeat h-screen w-screen font-sans bg-cover bg-center flex-col">
-      <div className='p-[15vh] text-center '>
+      <div className='p-[14vh] text-center '>
      <Fade bottom>
     <h1 className="md:text-5xl text-3xl font-semibold">MODEL X</h1>  
     <p className="underline mt-4 md:text-xl ">Check Inventory</p>
