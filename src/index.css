@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family:"Rubik",sans-serif;
+}
+.section{
+    background-image: url('components/car1.jpg');
+}
+.section1{
+    background-image: url('components/images/model-y.jpg');
+}
+.section2{
+    background-image: url('components/images/model-x.jpg');
+}
+.section3{
+    background-image: url('components/images/solar-panel.jpg');
+}
+.section4{
+    background-image: url('components/images/solar-roof.jpg');
+}
+.section5
+{
+    background-image: url('components/images/accessories.jpg');
+}
