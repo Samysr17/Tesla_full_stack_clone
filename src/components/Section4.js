@@ -7,8 +7,8 @@ function Section4() {
     <div  className="section4 bg-no-repeat h-screen w-screen font-sans bg-cover bg-center flex-col">
       <div className='p-[15vh] text-center '>
         <Fade bottom>
-    <h1 className="md:text-5xl text-3xl font-semibold">Model S</h1>  
-    <p className="underline mt-4 md:text-xl ">Check Inventory</p>
+    <h1 className="md:text-5xl text-3xl ">Solar Roof</h1>  
+    <p className=" mt-4 md:text-sm ">Produce clean energy from your roof</p>
     </Fade>
     </div>
     <div className="text-center items-center flex  flex-col sm:mt-80 mt-72 md:flex-row md:text-center md:space-x-4 ">
