@@ -4,5 +4,6 @@ The app is under build and will be committing the work in the repository during 
 
 
 
-![image](https://user-images.githubusercontent.com/108344579/236547123-1ec063a9-fcaa-4464-a529-ad8b2013e083.png)
+![image](https://github.com/Samysr17/Tesla_full_stack_clone/assets/108344579/57d40b88-7903-4cdd-bebe-ea47048d5911)
+
 
