@@ -62,6 +62,15 @@ const Section_2_1 = () => {
   <div>
     
   </div>
+  <div className="bg-black text-white flex-col">
+  <p className="pt-4 text-xl ml-[10%]">Plaid</p>
+  <h1 className="mt-4 font-semibold text-2xl ml-[10%]">Beyond Ludicrous</h1>
+  <p className='max-w-[60%] pt-4 ml-[10%] text-sm'>Model S Plaid has the quickest acceleration of any vehicle in production. Updated battery architecture for all Model S trims enables back-to-back track runs without performance degradation. Chat with a Tesla Advisor to learn more about Model S or schedule a demo drive today.</p>
+  <div className="flex  max-w-[70%] md:max-w-[20%] justify-between ml-[10%] mt-12 ">
+  <button className='p-2 bg-transparent border-2 border-white rounded-md'>Order Now</button>
+  <button className='p-2 bg-white text-black border-2  border-white rounded-md '>Compare Models</button>
+  </div>
+  </div>
   <div>
     <img className="w-screen h-screen" src={foot} alt=''/>
   </div>
