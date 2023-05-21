@@ -12,11 +12,14 @@ import Section4 from "./components/Section4"
 import Section5 from "./components/Section5"
 import Header from './components/Header'
 import Home2 from './components/Home2';
+import { AuthContextProvider } from './context/Authicontext';
+import Signin from './components/Signin';
 
 
 function App() {
   return (
     <div className="">
+      <AuthContextProvider>
       <BrowserRouter>
       <Routes>
       <Route path="/" element={[<Testdrive/>,<Header/>,
@@ -27,13 +30,10 @@ function App() {
         ,<Section4/>
         ,<Section5/>]}/>
         <Route path="/page2" element={<Home2/>}/>
-        <Route path="/Section1" element={<Section1/>}/>
-        <Route path="/Section2" element={<Section2/>}/>
-        <Route path="/Section3" element={<Section3/>}/>
-        <Route path="/Section4" element={<Section4/>}/>
-        <Route path="/Section5" element={<Section5/>}/>
+        <Route path="/account" element={<Signin/>} />
       </Routes>
       </BrowserRouter>
+      </AuthContextProvider>
     </div>
   );
 }
