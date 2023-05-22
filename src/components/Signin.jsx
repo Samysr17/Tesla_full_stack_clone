@@ -13,7 +13,7 @@ const Signin = () => {
   return (
     <div>
         <div className="text-red-200">
-              <p>Manchester uNited</p>
+              <p>Manchester uNite</p>
               <GoogleButton onClick={handlegoogle}/>
         </div>
     </div>
