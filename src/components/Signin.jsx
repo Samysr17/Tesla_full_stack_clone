@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState,useEffect } from 'react'
 import {GoogleButton} from 'react-google-button'
 import { UserAuth } from '../context/Authicontext'
 const Signin = () => {
@@ -10,10 +11,10 @@ const Signin = () => {
         console.log(error);
      }
     }
+    const [set,setuser]=useState({});//useffect for context sign out and email functionality....
   return (
     <div>
         <div className="text-red-200">
-              <p>Manchester uNite</p>
               <GoogleButton onClick={handlegoogle}/>
         </div>
     </div>
