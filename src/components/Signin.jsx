@@ -19,13 +19,20 @@ const Signin = () => {
        <img src={logo1} alt="" size={10} className="w-32 ml-4 " />
        </div>
        <div className="flex flex-col items-center justify-between">
-        <div className="mt-8 text-2xl" >Sign IN</div>
-        <div className="mt-4">Email</div>
-        <div>_________Or__________</div>
+        <div className="flex justify-between">
+        <div className="mt-24 text-4xl ml-0" >Sign In</div>
+        </div>
+        <div className="mt-12">Email</div>
         <div><input placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
-        <div className="text-red-200 mt-8">
+        <div className="mt-8">_________Or__________</div>
+        <div className="text-red-200 mt-16">
               <GoogleButton onClick={handlegoogle}/>
         </div>
+        </div>
+        <div className="flex justify-center mt-[40%] md:mt-[18%] md:space-x-12 space-x-4">
+         <div>Tesla @c 2023</div>
+         <div>Privacy & Legal</div>
+         <div>Contact</div>
         </div>
     </div>
   )
