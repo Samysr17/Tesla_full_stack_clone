@@ -8,10 +8,10 @@ function Testdrive(){
      <video className="h-full w-full object-cover" src={video_2} autoPlay loop muted/>
     
     <div className="flex flex-col text-white absolute w-full h-screen top-0 text-center mt-[30%] md:mt-[8%] p-2">
-       <Fade bottom><h1 className="text-3xl md:text-5xl font-bold">Experience Tesla</h1>
+       <Fade bottom><h1 className="text-3xl md:text-5xl font-bold hover:ease-in duration-300 hover:text-4xl cursor-pointer">Experience Tesla</h1>
        </Fade> 
        <Fade bottom>
-        <p className="text-sm md:text-base ">Schedule a Demo drive today</p>
+        <p className="text-sm md:text-base  ">Schedule a Demo drive today</p>
         </Fade>
         <div className="mt-[30%] md:mt-[20%]">
        <Fade bottom>

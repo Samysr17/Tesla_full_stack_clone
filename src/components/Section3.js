@@ -7,7 +7,7 @@ function Section3 () {
     <div  className="section3 bg-no-repeat h-screen w-screen font-sans bg-cover bg-center flex-col">
       <div className='p-[15vh] text-center '>
       <Fade bootom>
-      <h1 className="md:text-5xl text-3xl ">Solar Panels</h1>  
+      <h1 className="md:text-5xl text-3xl hover:ease-in duration-300 hover:text-4xl cursor-pointer ">Solar Panels</h1>  
     <p className=" mt-4 md:text-sm ">Lowest Cost solar Panels in America</p>
     </Fade>
     </div>
