@@ -9,7 +9,7 @@ const Section1 = () => {
      <video className="h-full w-full object-cover" src={video_1} autoPlay loop muted/>
     
     <div className="flex flex-col text-white absolute w-full h-screen top-0 text-center mt-[30%] md:mt-[8%] p-2">
-       <Fade bottom><h1 className="text-3xl md:text-5xl font-bold">Model 3</h1>
+       <Fade bottom><h1 className="text-3xl hover:ease-in duration-300 hover:text-4xl cursor-pointer md:text-5xl font-bold">Model 3</h1>
        </Fade> 
        <Fade bottom>
         <p className="text-sm md:text-base ">Schedule a Demo drive today</p>

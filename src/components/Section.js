@@ -8,7 +8,7 @@ function Section(){
       
       <div className='p-[15vh] text-center  '>
         <Fade bottom>
-    <h1 className="md:text-5xl text-3xl ">Model S</h1>  
+    <h1 className="md:text-5xl hover:ease-in duration-300 hover:text-4xl cursor-pointer text-3xl ">Model S</h1>  
     <p className=" md:text-sm ">Check Inventory</p>
     </Fade>
     </div>

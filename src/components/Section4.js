@@ -7,7 +7,7 @@ function Section4() {
     <div  className="section4 bg-no-repeat h-screen w-screen font-sans bg-cover bg-center flex-col">
       <div className='p-[15vh] text-center '>
         <Fade bottom>
-    <h1 className="md:text-5xl text-3xl ">Solar Roof</h1>  
+    <h1 className="md:text-5xl hover:ease-in duration-300 hover:text-4xl cursor-pointer text-3xl ">Solar Roof</h1>  
     <p className=" mt-4 md:text-sm ">Produce clean energy from your roof</p>
     </Fade>
     </div>
