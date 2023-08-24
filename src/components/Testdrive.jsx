@@ -14,7 +14,8 @@ function Testdrive(){
         <p className="text-sm md:text-base ">Schedule a Demo drive today</p>
         </Fade>
         <div className="mt-[30%] md:mt-[20%]">
-       <Fade bottom><button className="p-2 bg-transparent border-white hover:bg-white hover:text-black  border-4  font-semibold w-80 rounded-lg ">Demo Drive</button></Fade> 
+       <Fade bottom>
+        <button className="p-2 bg-transparent border-white hover:bg-white mt-24 md:mt-20 hover:text-black  border-4  font-semibold w-80 rounded-lg ">Demo Drive</button></Fade> 
     </div>
     </div>
   
