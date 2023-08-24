@@ -16,7 +16,7 @@ const Section1 = () => {
         </Fade>
         <div className="mt-[30%] md:mt-[20%]">
        <Fade bottom>
-        <button className="p-2 bg-transparent border-white hover:bg-white mt-24 md:mt-20 hover:text-black  border-4  font-semibold w-80 rounded-lg ">Demo Drive</button></Fade> 
+        <button className="p-2 bg-transparent border-white hover:ease-in duration-300 hover:w-[40%]   hover:bg-white mt-24 md:mt-20 hover:text-black  border-4  font-semibold w-80 rounded-lg ">Demo Drive</button></Fade> 
     </div>
     </div>
   

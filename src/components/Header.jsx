@@ -51,29 +51,29 @@ const handlemenu=()=>{
           <ul className="mobile  ml-[20%] ">
           <AiOutlineClose size={24} color='white' className='ml-[90%]'/>
           <li className="w-40 mt-12 "><img src={logo1} alt="" size={10} /></li>
-            <li className="hover:underline mt-16">Existing Inventory</li>
-            <li className="hover:underline mt-4">Used Inventory</li>
-            <li className="hover:underline mt-4">Trade-In</li>
-            <li className="hover:underline mt-4">Demo Drive</li>
-            <li className="hover:underline mt-4">Insurance</li>
-            <li className="hover:underline mt-4">Fleet</li>
-            <li className="hover:underline mt-4">Cybertruck</li>
-            <li className="hover:underline mt-4">Roadster</li>
-            <li className="hover:underline mt-4">Trade-In</li>
-            <li className="hover:underline mt-4">Semi</li>
-            <li className="hover:underline mt-4">Insurance</li>
-            <li className="hover:underline  mt-4">Commercial Energy</li>
-            <li className="hover:underline mt-4">Careers</li>  
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-16">Existing Inventory</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Used Inventory</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Trade-In</li>
+            <li className="hover:ease-in duration-300 hover:text-white  hover:text-xl mt-4">Demo Drive</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Insurance</li>
+            <li className="hover:ease-in duration-300 hover:text-white  hover:text-xl mt-4">Fleet</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Cybertruck</li>
+            <li className="hover:ease-in duration-300 hover:text-white  hover:text-xl mt-4">Roadster</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Trade-In</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl mt-4">Semi</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Insurance</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl   mt-4">Commercial Energy</li>
+            <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Careers</li>  
           </ul>
         </div>
         </div>
         <div onClick={handlenav} className="lg:hidden mr-4 z-10">
            {nav ? <AiOutlineClose size={24} color='white'/>:<HiOutlineMenuAlt4 size={24} color='gray'/>}
         </div>
-        <div onClick={handlenav} className={nav?"right-0 top-0 absolute backdrop-blur-3xl text-white w-[55%] px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>
+        <div onClick={handlenav} className={nav?"right-0 top-0 absolute backdrop-blur-3xl ease-in duration:900 text-white w-[55%] px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>
           <ul className="mobile ml-[20%]  ">
           <li className="w-20 mt-16 md:w-40 md:mt-16 "><img src={logo1} alt="" size={10}/></li>
-          <a href='https://shop.tesla.com/'><p className="mr-4 mt-8">Shop</p></a>
+          <a href='https://shop.tesla.com/'><p className="mr-4 mt-8">Shop</p></a> 
           <p className="mr-4 mt-4">Account</p>
             <li className="hover:underline mt-4 md:mt-16 ">Existing Inventory</li>
             <li className="hover:underline mt-4">Used Inventory</li>

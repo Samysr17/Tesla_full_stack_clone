@@ -9,7 +9,6 @@ const Section_2_1 = () => {
   return (
     <div>
     <div  className="section_2_1 bg-no-repeat h-screen w-screen font-sans bg-cover bg-center flex-col">
-      
     <div className='p-[15vh] text-center '>
       <Fade bottom>
   <h1 className="md:text-5xl text-3xl ">Model S</h1>  
