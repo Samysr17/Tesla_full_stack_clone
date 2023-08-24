@@ -1,4 +1,6 @@
 # Getting Started with Create React App 
+![image](https://github.com/Samysr17/Tesla_full_stack_clone/assets/108344579/41c59223-ff9b-412f-8c49-a26f852ade7d)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 ![image](https://github.com/Samysr17/Tesla_full_stack_clone/assets/108344579/69c90f2d-fa83-443d-bf2a-38156aac01c0)
