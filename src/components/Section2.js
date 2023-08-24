@@ -8,7 +8,7 @@ function Section2() {
       <div className='p-[15vh] text-center '>
         <Fade bottom>
     <h1 className="md:text-5xl text-3xl  ">Model Y</h1>  
-    <p className="underline mt-4 md:text-sm ">Check Inventory</p>
+    <p className=" mt-4 md:text-sm ">Check Inventory</p>
     </Fade>
     </div>
     <div className="text-center items-center flex flex-col  mt-[35%] md:mt-[20%] md:flex-row md:text-center ">

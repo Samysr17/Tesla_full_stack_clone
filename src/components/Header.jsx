@@ -35,18 +35,18 @@ const handlemenu=()=>{
         </div>
         <div className='hidden lg:flex cursor-pointer' >
           <ul className=" flex text-gray-400  ">
-            <li className="p-4 "><Link to="/page2">Model S</Link></li>
-            <li className=" p-4 ">Model X</li>
-            <li className="p-4 ">Model Y</li>
-            <li className="p-4">Solar Roof</li>
-            <li className="p-4 ">Solar Panel</li>
-            <li className=" p-4 ">Powerwall</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  "><Link to="/page2 ">Model S</Link></li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  ">Model X</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Model Y</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Solar Roof</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Solar Panel</li>
+            <li className=" p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Powerwall</li>
           </ul>
         </div>
         <div className='hidden lg:flex mr-6 text-gray-400 cursor-pointer '>
-          <a href='https://shop.tesla.com/'><p className="mr-4">Shop</p></a>
-          <p className="mr-4"><Link to="/account">Account</Link></p>
-          <p onClick={handlemenu}  className="mr-4">Menu</p>
+          <a href='https://shop.tesla.com/'><p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Shop</p></a>
+          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/account">Account</Link></p>
+          <p onClick={handlemenu}  className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Menu</p>
           <div onClick={handlemenu} className={menu?"right-0 top-0 absolute  backdrop-blur-3xl text-white w-[25%]  px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>
           <ul className="mobile  ml-[20%] ">
           <AiOutlineClose size={24} color='white' className='ml-[90%]'/>
