@@ -10,9 +10,9 @@ function Section5() {
     <h1 className="md:text-5xl text-3xl ">Accessories</h1>  
     </Fade>
     </div>
-    <div className="text-center items-center flex  flex-col mt-[30%] md:mt-[20%] md:flex-row md:text-center md:space-x-4 ">
+    <div className="text-center items-center flex  flex-col mt-[60%] md:mt-[25%] md:flex-row md:text-center md:space-x-4 ">
     <Fade bottom>
-    <button className=" md:ml-[40%] sm:w-[20%] w-[30%] p-3 bg-slate-800 text-white  md:w-46 rounded-2xl">Order Now</button>
+    <button className=" md:ml-[40%] sm:w-[20%] w-[30%] p-3 bg-transparent border-4 border-black md:w-46 rounded-2xl hover:bg-black hover:text-white">Order Now</button>
     </Fade>
     </div>
     </div>
