@@ -38,8 +38,8 @@ const handlemenu=()=>{
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  "><Link to="/page2 ">Model S</Link></li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  ">Model X</li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Model Y</li>
-            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Solar_Roofs">Solar Roof</Link></li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Solar Panel</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Solar_Roofs">Solar Roof</Link></li>
             <li className=" p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Powerwall">Powerwall</Link></li>
           </ul>
         </div>
