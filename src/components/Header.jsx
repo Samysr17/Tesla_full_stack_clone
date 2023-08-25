@@ -35,10 +35,10 @@ const handlemenu=()=>{
         </div>
         <div className='hidden lg:flex cursor-pointer' >
           <ul className=" flex text-gray-400  ">
-            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  "><Link to="/page2 ">Model S</Link></li>
-            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  ">Model X</li>
-            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Model Y</li>
-            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Solar Panel</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  "><Link to="/Model_S ">Model S</Link></li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  "><Link to="/Model_X" >Model X</Link></li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Model_Y">Model Y</Link></li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Solar_Panels">Solar Panel</Link></li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Solar_Roofs">Solar Roof</Link></li>
             <li className=" p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Powerwall">Powerwall</Link></li>
           </ul>

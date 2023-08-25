@@ -16,6 +16,9 @@ import Home4 from './components/Home4';
 import Home5 from './components/Home5';
 import { AuthContextProvider } from './context/Authicontext';
 import Signin from './components/Signin';
+import Home1 from './components/Home1';
+import Home3 from './components/Home3';
+import Home0 from './components/Home0';
 
 
 function App() {
@@ -31,10 +34,13 @@ function App() {
         ,<Section3/>
         ,<Section4/>
         ,<Section5/>]}/>
-        <Route path="/page2" element={<Home2/>}/>
+        <Route path="/Model_S" element={<Home2/>}/>
         <Route path="/account" element={<Signin/>} />
         <Route path="/Solar_Roofs" element={<Home4/>}/>
         <Route path="/Powerwall" element={<Home5/>}/>
+        <Route path="/Solar_Panels" element={<Home1/>}/>
+        <Route path="/Model_Y" element={<Home3/>}/>
+        <Route path="/Model_X" element={<Home0/>}/>
       </Routes>
       </BrowserRouter>
       </AuthContextProvider>
