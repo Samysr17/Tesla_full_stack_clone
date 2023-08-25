@@ -12,6 +12,8 @@ import Section4 from "./components/Section4"
 import Section5 from "./components/Section5"
 import Header from './components/Header'
 import Home2 from './components/Home2';
+import Home4 from './components/Home4';
+import Home5 from './components/Home5';
 import { AuthContextProvider } from './context/Authicontext';
 import Signin from './components/Signin';
 
@@ -31,6 +33,8 @@ function App() {
         ,<Section5/>]}/>
         <Route path="/page2" element={<Home2/>}/>
         <Route path="/account" element={<Signin/>} />
+        <Route path="/Solar_Roofs" element={<Home4/>}/>
+        <Route path="/Powerwall" element={<Home5/>}/>
       </Routes>
       </BrowserRouter>
       </AuthContextProvider>

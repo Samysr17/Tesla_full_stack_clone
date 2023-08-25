@@ -31,16 +31,16 @@ const handlemenu=()=>{
     <div>
     <div className="flex fixed justify-between items-center w-full z-10 top-4 h-20 ">
         <div className="Name text-white text-5xl ml-2">
-        <img src={logo1} alt="" size={10} className="w-32 ml-4" />
+        <Link to="/"><img src={logo1} alt="" size={10} className="w-32 ml-4" /></Link>
         </div>
         <div className='hidden lg:flex cursor-pointer' >
           <ul className=" flex text-gray-400  ">
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  "><Link to="/page2 ">Model S</Link></li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl  ">Model X</li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Model Y</li>
-            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Solar Roof</li>
+            <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Solar_Roofs">Solar Roof</Link></li>
             <li className="p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Solar Panel</li>
-            <li className=" p-4 hover:ease-in duration-300 hover:text-white hover:text-xl ">Powerwall</li>
+            <li className=" p-4 hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/Powerwall">Powerwall</Link></li>
           </ul>
         </div>
         <div className='hidden lg:flex mr-6 text-gray-400 cursor-pointer '>
