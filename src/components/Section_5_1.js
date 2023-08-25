@@ -24,6 +24,13 @@ const Section_5_1 = () => {
         <button className="bg-gray-600 opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 hover:w-[35%] border-4 border-gray-600 w-[30%] p-2   rounded-sm">Schedule a Virtual Consultation</button>
         <span className="text-sm underline text-white mt-4 cursor-pointer hover:text-xl hover:ease-in duration-300 ">Get Updates</span>
       </div>
+      <div className="flex mt-[10%] justify-center text-white">
+        <div>Tesla © 2023</div>
+        <div>Privacy & Legal</div>
+        <div>Vehicle Recalls</div>
+        <div>Contact</div>
+        <div>Location</div>
+      </div>
     </div>
     </div>
   )
