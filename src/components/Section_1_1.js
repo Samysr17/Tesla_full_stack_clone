@@ -1,5 +1,5 @@
 import React from 'react'
-import video_3 from './Model_3.webm'
+import video_3 from './panel_1.webm'
 import Fade from 'react-reveal/Fade'
 import game from './images/new-interior.jpg'
 import foot from './images/Red.jpg'

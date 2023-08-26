@@ -8,7 +8,7 @@ import vdo from './images/video2.webm'
 const Section_3_1 = () => {
   return (
     <div>
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative bg-black">
     <video className="h-full w-full object-cover" src={video_3} autoPlay loop muted/>
    
    <div className="flex flex-col text-white absolute w-full h-screen top-0 text-center mt-[30%] md:mt-[8%] p-2">
