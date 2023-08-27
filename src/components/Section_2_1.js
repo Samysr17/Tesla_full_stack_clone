@@ -1,7 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal'
 import game from './images/new-interior.jpg'
-import foot from './images/Red.jpg'
 import con from './images/connected.jpg'
 import vdo from './images/video2.webm'
 import m_1 from './model_1.webm'
@@ -60,9 +59,21 @@ const Section_2_1 = () => {
  </div>
  </Fade>
  </div>
- <div>
-   <img className="w-screen h-screen" src={foot} alt=''/>
- </div>
+ <div className='bg-black h-screen w-screen bg-cover bg-center'>
+     <div className=' p-[20vh] text-center items-center flex flex-col'>
+        <h1 className='text-white text-3xl'>Transform Your Roof</h1>
+        <button className="bg-transparent mt-8 border-white border-4 hover:ease-in duration-300 hover:w-[35%] w-100vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm">Order Now</button>
+        <button className="bg-gray-600 opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 hover:w-[35%] border-4 border-gray-600  md:w-[50%] p-2   rounded-sm">Schedule a Virtual Consultation</button>
+        <span className="text-sm underline text-white mt-4 cursor-pointer hover:text-xl hover:ease-in duration-300 ">Get Updates</span>
+      </div>
+      <div className="sm:flex mt-[10%] justify-center hidden text-white space-x-4 ">
+        <div>Tesla © 2023</div>
+        <div>Privacy & Legal</div>
+        <div>Vehicle Recalls</div>
+        <div>Contact</div>
+        <div className="">Location</div>
+      </div>
+    </div>
  </div>
   )
 }
