@@ -30,7 +30,7 @@ const Section_1_1 = () => {
  <div className="flex justify-center">
    <img className="w-[80%] h-[40vh] md:w-[50%] md:h-[60vh] " src={panel_img} alt=''/>
  </div>
- <div className='flex-col'>
+ <div className='md:hidden flex-col '>
     <div className="flex flex-col">
       <h1 className="">Concealed Edge</h1>
       <span className="">A front skirt helps hide hardware and the panel edge.</span>
@@ -43,6 +43,22 @@ const Section_1_1 = () => {
        <h1 className="">Low-Profile</h1>
       <span className="">Rail-free mounting keeps panels close to your roof.</span>
     </div>
+ </div>
+ <div className="flex justify-center">
+ <div className='md:flex md:justify-between md:w-[50%]'>
+    <div className="flex flex-col">
+      <h1 className="">Concealed Edge</h1>
+      <span className="">A front skirt helps hide hardware and the panel edge.</span>
+    </div>
+    <div className="flex flex-col">
+      < h1 className="">No Visible Grid</h1>
+      <span className="">Panels and hardware are all-black for a uniform, monochromatic look.</span>
+    </div>
+    <div className="flex flex-col">
+       <h1 className="">Low-Profile</h1>
+      <span className="">Rail-free mounting keeps panels close to your roof.</span>
+    </div>
+ </div>
  </div>
  </Fade>
 
