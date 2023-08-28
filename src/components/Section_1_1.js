@@ -44,19 +44,19 @@ const Section_1_1 = () => {
       <span className="">Rail-free mounting keeps panels close to your roof.</span>
     </div>
  </div>
- <div className="flex justify-center">
+ <div className="flex justify-center mt-4">
  <div className='md:flex md:justify-between md:w-[50%]'>
-    <div className="flex flex-col">
+    <div className="flex flex-col w-[33%]">
       <h1 className="">Concealed Edge</h1>
-      <span className="">A front skirt helps hide hardware and the panel edge.</span>
+      <span className="mt-4">A front skirt helps hide hardware and the panel edge.</span>
     </div>
-    <div className="flex flex-col">
+    <div className="flex flex-col ml-[2%] w-[33%]">
       < h1 className="">No Visible Grid</h1>
-      <span className="">Panels and hardware are all-black for a uniform, monochromatic look.</span>
+      <span className="mt-4">Panels and hardware are all-black for a uniform, monochromatic look.</span>
     </div>
-    <div className="flex flex-col">
+    <div className="flex flex-col ml-[2%] w-[33%]">
        <h1 className="">Low-Profile</h1>
-      <span className="">Rail-free mounting keeps panels close to your roof.</span>
+      <span className="mt-4">Rail-free mounting keeps panels close to your roof.</span>
     </div>
  </div>
  </div>
