@@ -26,7 +26,7 @@ const Section_2_1 = () => {
  
    </div>
    <div className="bg-black w-screen h-[400px] text-white flex justify-center text-center ">
-   <Fade bottom><div className="mt-[10%] text-3xl">Interior of the Future</div></Fade>
+   <Fade bottom><div className="mt-[10%] text-3xl  hover:ease-in duration-300  hover:text-xl cursor-pointer">Interior of the Future</div></Fade>
  </div>
  <div>
    <img className="w-screen h-screen" src={game} alt=''/>
@@ -35,7 +35,7 @@ const Section_2_1 = () => {
    <video className='w-full h-full ' src={vdo}  autoPlay muted loop/>
  </div>
  <div className="flex flex-col bg-black text-white h-[40%]">
- <Fade bottom> <h1 className ="text-xl ml-[10%] mt-16 ">Cinematic Experience</h1>
+ <Fade bottom> <h1 className ="text-xl ml-[10%] mt-16 hover:ease-in duration-300  hover:text-2xl cursor-pointer ">Cinematic Experience</h1>
 <p className="text-sm ml-[10%] mt-8 max-w-[80%] mb-[100px]">A 17” touchscreen with left-right tilt offers 2200 x 1300 resolution, true colors and exceptional responsiveness for gaming, movies and more.</p>
 </Fade>
  </div>
@@ -48,14 +48,14 @@ const Section_2_1 = () => {
  </div>
  <div className="bg-black text-white flex-col">
  <Fade bottom>
- <p className="pt-4 text-xl ml-[10%]">Plaid</p>
- <h1 className="mt-4 font-semibold text-2xl ml-[10%]">Beyond Ludicrous</h1>
+ <p className="pt-4 text-xl ml-[10%] hover:ease-in duration-300 hover:text-2xl cursor-pointer">Plaid</p>
+ <h1 className="mt-4 font-semibold text-2xl ml-[10%]  hover:ease-in duration-300 hover:text-xl cursor-pointer">Beyond Ludicrous</h1>
  <p className='max-w-[60%] pt-4 ml-[10%] text-sm'>Model S Plaid has the quickest acceleration of any vehicle in production. Updated battery architecture for all Model S trims enables back-to-back track runs without performance degradation. Chat with a Tesla Advisor to learn more about Model S or schedule a demo drive today.</p>
  </Fade>
  <Fade bottom>
  <div className="flex  max-w-[70%] md:max-w-[20%] justify-between ml-[10%] mt-12 ">
- <button className='p-2 bg-transparent border-2 border-white rounded-md'>Order Now</button>
- <button className='p-2 bg-white text-black border-2  border-white rounded-md '>Compare Models</button>
+ <button className='p-2 bg-transparent border-2 ease-in duration-300 border-white rounded-md '>Order Now</button>
+ <button className='p-2 bg-white text-black border-2 ease-in duration-300    border-white rounded-md '>Compare Models</button>
  </div>
  </Fade>
  </div>
@@ -67,11 +67,11 @@ const Section_2_1 = () => {
         <span className="text-sm underline text-white mt-4 cursor-pointer hover:text-xl hover:ease-in duration-300 ">Get Updates</span>
       </div>
       <div className="sm:flex mt-[10%] justify-center hidden text-white space-x-4 ">
-        <div>Tesla © 2023</div>
-        <div>Privacy & Legal</div>
-        <div>Vehicle Recalls</div>
-        <div>Contact</div>
-        <div className="">Location</div>
+        <div className="ease in duration-300 hover:text-xl cursor-pointer">Tesla © 2023</div>
+        <div className="ease in duration-300 hover:text-xl cursor-pointer">Privacy & Legal</div>
+        <div className="ease in duration-300 hover:text-xl cursor-pointer">Vehicle Recalls</div>
+        <div className="ease in duration-300 hover:text-xl cursor-pointer">Contact</div>
+        <div className="ease in duration-300 hover:text-xl cursor-pointer">Location</div>
       </div>
     </div>
  </div>
