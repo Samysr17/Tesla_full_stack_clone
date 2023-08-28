@@ -1,6 +1,7 @@
 import React from 'react'
 import video_3 from './panel_1.webm'
 import Fade from 'react-reveal/Fade'
+import panel_img from './panel_img.avif'
 
 const Section_1_1 = () => {
   return (
@@ -21,6 +22,31 @@ const Section_1_1 = () => {
    </div>
  
    </div>
+   <div className="bg-black text-white h-screen w-screen flex-col">
+ <Fade bottom>
+ <p className="pt-4 text-xl ml-[10%] hover:ease-in duration-300 hover:text-2xl cursor-pointer"></p>
+ <h1 className="mt-4 font-semibold text-2xl ml-[10%]  hover:ease-in duration-300 hover:text-xl cursor-pointer">Clean Aesthetic</h1>
+ <p className='max-w-[40%] pt-4 ml-[10%] text-sm'>All-black panels and proprietary hardware keep the array close to your roof — no bulky racks, no large gaps.</p>
+ <div className="flex justify-center">
+   <img className="w-[80%] h-[40vh] md:w-[50%] md:h-[60vh] " src={panel_img} alt=''/>
+ </div>
+ <div className='flex-col'>
+    <div className="flex flex-col">
+      <h1 className="">Concealed Edge</h1>
+      <span className="">A front skirt helps hide hardware and the panel edge.</span>
+    </div>
+    <div className="flex flex-col">
+      < h1 className="">No Visible Grid</h1>
+      <span className="">Panels and hardware are all-black for a uniform, monochromatic look.</span>
+    </div>
+    <div className="flex flex-col">
+       <h1 className="">Low-Profile</h1>
+      <span className="">Rail-free mounting keeps panels close to your roof.</span>
+    </div>
+ </div>
+ </Fade>
+
+ </div>
    <div className='bg-black h-screen w-screen bg-cover bg-center'>
      <div className=' p-[20vh] text-center items-center flex flex-col'>
         <h1 className='text-white text-3xl'>Transform Your Roof</h1>
