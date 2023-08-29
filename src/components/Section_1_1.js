@@ -25,10 +25,10 @@ const Section_1_1 = () => {
    <div className="bg-black text-white h-screen w-screen flex-col">
  <Fade bottom>
  <p className="pt-4 text-xl ml-[10%] hover:ease-in duration-300 hover:text-2xl cursor-pointer"></p>
- <h1 className="mt-4 font-semibold text-2xl ml-[10%]  hover:ease-in duration-300 hover:text-xl cursor-pointer">Clean Aesthetic</h1>
+ <h1 className="mt-8 font-semibold text-2xl ml-[10%]  hover:ease-in duration-300 hover:text-xl cursor-pointer">Clean Aesthetic</h1>
  <p className='max-w-[40%] pt-4 ml-[10%] text-sm'>All-black panels and proprietary hardware keep the array close to your roof — no bulky racks, no large gaps.</p>
  <div className="flex justify-center">
-   <img className="w-[80%] h-[40vh] md:w-[50%] md:h-[60vh] " src={panel_img} alt=''/>
+   <img className="w-[80%] mt-8 h-[40vh] md:w-[50%] md:h-[60vh] " src={panel_img} alt=''/>
  </div>
  <div className='md:hidden flex-col '>
     <div className="flex flex-col">
@@ -44,18 +44,18 @@ const Section_1_1 = () => {
       <span className="">Rail-free mounting keeps panels close to your roof.</span>
     </div>
  </div>
- <div className="flex justify-center mt-4">
+ <div className="flex justify-center mt-4 cursor-pointer">
  <div className='md:flex md:justify-between md:w-[50%]'>
     <div className="flex flex-col w-[33%]">
-      <h1 className="">Concealed Edge</h1>
+      <h1 className="font-bold text-xl hover:ease-in duration-300 hover:text-2xl">Concealed Edge</h1>
       <span className="mt-4">A front skirt helps hide hardware and the panel edge.</span>
     </div>
     <div className="flex flex-col ml-[2%] w-[33%]">
-      < h1 className="">No Visible Grid</h1>
+      < h1 className="font-bold text-xl hover:ease-in duration-300 hover:text-2xl">No Visible Grid</h1>
       <span className="mt-4">Panels and hardware are all-black for a uniform, monochromatic look.</span>
     </div>
     <div className="flex flex-col ml-[2%] w-[33%]">
-       <h1 className="">Low-Profile</h1>
+       <h1 className="font-bold text-xl hover:ease-in duration-300 hover:text-2xl">Low-Profile</h1>
       <span className="mt-4">Rail-free mounting keeps panels close to your roof.</span>
     </div>
  </div>
@@ -65,10 +65,18 @@ const Section_1_1 = () => {
  </div>
    <div className='bg-black h-screen w-screen bg-cover bg-center'>
      <div className=' p-[20vh] text-center items-center flex flex-col'>
+      <Fade bottom>
         <h1 className='text-white text-3xl'>Transform Your Roof</h1>
+        </Fade>
+        <Fade bottom>
         <button className="bg-transparent mt-8 border-white border-4 hover:ease-in duration-300 hover:w-[35%] w-100vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm">Order Now</button>
+        </Fade>
+        <Fade bottom>
         <button className="bg-gray-600 opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 hover:w-[35%] border-4 border-gray-600  md:w-[50%] p-2   rounded-sm">Schedule a Virtual Consultation</button>
+        </Fade>
+        <Fade bottom>
         <span className="text-sm underline text-white mt-4 cursor-pointer hover:text-xl hover:ease-in duration-300 ">Get Updates</span>
+        </Fade>
       </div>
       <div className="sm:flex mt-[10%] justify-center hidden text-white space-x-4 ">
         <div>Tesla © 2023</div>
