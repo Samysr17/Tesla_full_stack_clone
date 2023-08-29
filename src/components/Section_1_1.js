@@ -24,27 +24,38 @@ const Section_1_1 = () => {
    </div>
    <div className="bg-black text-white h-screen w-screen flex-col">
  <Fade bottom>
- <p className="pt-4 text-xl ml-[10%] hover:ease-in duration-300 hover:text-2xl cursor-pointer"></p>
- <h1 className="mt-8 font-semibold text-2xl ml-[10%]  hover:ease-in duration-300 hover:text-xl cursor-pointer">Clean Aesthetic</h1>
+ <p className="pt-4 text-xl ml-[10%] hover:ease-in duration-300 hover:text-2xl cursor-pointer "></p>
+ <h1 className="mt-16 font-semibold text-2xl ml-[10%]  hover:ease-in duration-300 hover:text-xl cursor-pointer">Clean Aesthetic</h1>
+ </Fade>
+ <Fade left>
  <p className='max-w-[40%] pt-4 ml-[10%] text-sm'>All-black panels and proprietary hardware keep the array close to your roof — no bulky racks, no large gaps.</p>
+ </Fade>
  <div className="flex justify-center">
    <img className="w-[80%] mt-8 h-[40vh] md:w-[50%] md:h-[60vh] " src={panel_img} alt=''/>
  </div>
- <div className='md:hidden flex-col '>
+ 
+ <Fade left>
+ <div className='md:hidden flex flex-col w-[70%] justify-center items-center  ml-[15%]'>
     <div className="flex flex-col">
-      <h1 className="">Concealed Edge</h1>
+      <h1 className="font-bold text-sm hover:ease-in duration-300 hover:text-xl">Concealed Edge</h1>
       <span className="">A front skirt helps hide hardware and the panel edge.</span>
     </div>
-    <div className="flex flex-col">
-      < h1 className="">No Visible Grid</h1>
+    
+ <Fade right>
+    <div className="flex flex-col ml-[5%] " >
+      < h1 className="font-bold text-sm hover:ease-in duration-300 hover:text-xl">No Visible Grid</h1>
       <span className="">Panels and hardware are all-black for a uniform, monochromatic look.</span>
     </div>
+    </Fade>
+    <Fade left>
     <div className="flex flex-col">
-       <h1 className="">Low-Profile</h1>
+       <h1 className="font-bold text-sm hover:ease-in duration-300 hover:text-xl">Low-Profile</h1>
       <span className="">Rail-free mounting keeps panels close to your roof.</span>
     </div>
- </div>
- <div className="flex justify-center mt-4 cursor-pointer">
+    </Fade>
+ </div> 
+ </Fade>
+ <div className="hidden md:flex justify-center mt-4 cursor-pointer">
  <div className='md:flex md:justify-between md:w-[50%]'>
     <div className="flex flex-col w-[33%]">
       <h1 className="font-bold text-xl hover:ease-in duration-300 hover:text-2xl">Concealed Edge</h1>
@@ -60,21 +71,19 @@ const Section_1_1 = () => {
     </div>
  </div>
  </div>
- </Fade>
-
  </div>
    <div className='bg-black h-screen w-screen bg-cover bg-center'>
      <div className=' p-[20vh] text-center items-center flex flex-col'>
-      <Fade bottom>
+      <Fade left>
         <h1 className='text-white text-3xl'>Transform Your Roof</h1>
         </Fade>
-        <Fade bottom>
+        <Fade right>
         <button className="bg-transparent mt-8 border-white border-4 hover:ease-in duration-300 hover:w-[35%] w-100vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm">Order Now</button>
         </Fade>
-        <Fade bottom>
+        <Fade left>
         <button className="bg-gray-600 opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 hover:w-[35%] border-4 border-gray-600  md:w-[50%] p-2   rounded-sm">Schedule a Virtual Consultation</button>
         </Fade>
-        <Fade bottom>
+        <Fade right>
         <span className="text-sm underline text-white mt-4 cursor-pointer hover:text-xl hover:ease-in duration-300 ">Get Updates</span>
         </Fade>
       </div>
