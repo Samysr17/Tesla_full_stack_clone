@@ -1,6 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal'
 import panel_img from './panel_img.avif'
+import {Link} from 'react-router-dom'
 
 const Section_5_1 = () => {
   return (
@@ -70,7 +71,7 @@ const Section_5_1 = () => {
         <h1 className='text-white text-xl w-screen  md:text-3xl'>Transform Your Energy</h1>
         </Fade>
         <Fade right>
-        <button className="bg-transparent w-[50vw]  mt-8 border-white border-4 hover:ease-in duration-300 md:hover:w-[35%] w-50vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm">Order Now</button>
+        <button className="bg-transparent w-[50vw]  mt-8 border-white border-4 hover:ease-in duration-300 md:hover:w-[35%] w-50vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm"><Link to="addtocart" >Order Now</Link></button>
         </Fade>
         <Fade left>
         <button className="bg-gray-600 w-[50vw]  opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 md:hover:w-[35%] border-4 border-gray-600  md:w-[50%] p-2   rounded-sm">Schedule a Virtual Consultation</button>

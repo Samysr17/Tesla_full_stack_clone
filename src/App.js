@@ -19,6 +19,7 @@ import Signin from './components/Signin';
 import Home1 from './components/Home1';
 import Home3 from './components/Home3';
 import Home0 from './components/Home0';
+import Addtocart_home from './components/Addtocart_home';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/Solar_Panels" element={<Home1/>}/>
         <Route path="/Model_Y" element={<Home3/>}/>
         <Route path="/Model_X" element={<Home0/>}/>
+        <Route path="/addtocart" element={<Addtocart_home/>}/>
       </Routes>
       </BrowserRouter>
       </AuthContextProvider>
