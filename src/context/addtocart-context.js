@@ -16,6 +16,7 @@ export const Addtocart_contextProvider= (props) => {
 const removefromcart=(Itemid)=>{
     setitems((prev)=>({...prev,[Itemid]:prev[Itemid]-1}));
  };
+ console.log(items)
  const contextvalue={items,addtocart,removefromcart}
   return (
     <Addtocart_context.Provider value={contextvalue}>{props.children}</Addtocart_context.Provider>
