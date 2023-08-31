@@ -53,7 +53,7 @@ const Section_3_1 = () => {
  </Fade>
  <Fade bottom>
  <div className="flex  max-w-[70%] md:max-w-[20%] justify-between ml-[10%] mt-12 ">
- <button className='p-2 bg-transparent border-2 border-white rounded-md'><Link to="addtocart" >Order Now</Link></button>
+ <button className='p-2 bg-transparent border-2 border-white rounded-md'><Link to="/addtocart" >Order Now</Link></button>
  <button className='p-2 bg-white text-black border-2  border-white rounded-md '>Compare Models</button>
  </div>
  </Fade>

@@ -62,7 +62,7 @@ const Section_0_1 = () => {
  <div className='bg-black h-screen w-screen bg-cover bg-center'>
      <div className=' p-[20vh] text-center items-center flex flex-col'>
         <h1 className='text-white text-3xl'>Transform Your Roof</h1>
-        <button className="bg-transparent mt-8 border-white border-4 hover:ease-in duration-300 hover:w-[35%] w-100vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm"><Link to="addtocart" >Order Now</Link></button>
+        <button className="bg-transparent mt-8 border-white border-4 hover:ease-in duration-300 hover:w-[35%] w-100vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm"><Link to="/addtocart" >Order Now</Link></button>
         <button className="bg-gray-600 opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 hover:w-[35%] border-4 border-gray-600  md:w-[50%] p-2   rounded-sm">Schedule a Virtual Consultation</button>
         <span className="text-sm underline text-white mt-4 cursor-pointer hover:text-xl hover:ease-in duration-300 ">Get Updates</span>
       </div>
