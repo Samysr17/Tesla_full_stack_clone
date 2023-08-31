@@ -20,12 +20,14 @@ import Home1 from './components/Home1';
 import Home3 from './components/Home3';
 import Home0 from './components/Home0';
 import Home_cart  from './Home_cart';
+import { Addtocart_contextProvider } from './context/addtocart-context';
 
 
 function App() {
   return (
     <div className="">
       <AuthContextProvider>
+      <Addtocart_contextProvider>
       <BrowserRouter>
       <Routes>
       <Route path="/" element={[<Testdrive/>,<Header/>,
@@ -45,6 +47,7 @@ function App() {
         <Route path="/addtocart" element={<Home_cart/>}/>
       </Routes>
       </BrowserRouter>
+      </Addtocart_contextProvider>
       </AuthContextProvider>
     </div>
   );
