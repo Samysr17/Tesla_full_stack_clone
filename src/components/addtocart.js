@@ -7,7 +7,9 @@ const Addtocart = () => {
   const {items}=useContext(Addtocart_context);
 
   return (
-    <div className='bg-black w-screen h-screen'>
+    <div>
+    <div className='bg-black p-[10vh] w-screen h-screen'>
+      <div className=" p-[3vh] text-2xl text-white ">Your Cart</div>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
         return(
@@ -16,6 +18,7 @@ const Addtocart = () => {
 
       }
     })}
+    </div>
     </div>
   )
 }
