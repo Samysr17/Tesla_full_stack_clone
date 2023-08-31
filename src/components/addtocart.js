@@ -7,7 +7,7 @@ const Addtocart = () => {
   const {items}=useContext(Addtocart_context);
 
   return (
-    <div>
+    <div className='bg-black w-screen h-screen'>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
         return(
