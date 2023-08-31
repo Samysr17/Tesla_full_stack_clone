@@ -9,11 +9,7 @@ import { Addtocart_context } from '../context/addtocart-context'
 import { products } from '../products'
 
 
-const Section_2_1 = (props) => {
-  // const {}=props.data;
-  // products.map((item)=>(
-  //   data={item}
-  // ));
+const Section_2_1 = () => {
   const {addtocart} =useContext( Addtocart_context);
   return (
     <div>
