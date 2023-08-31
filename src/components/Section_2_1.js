@@ -6,7 +6,7 @@ import vdo from './images/video2.webm'
 import m_1 from './model_1.webm'
 import {Link} from 'react-router-dom'
 import { Addtocart_context } from '../context/addtocart-context'
-import { products } from '../products'
+
 
 
 const Section_2_1 = () => {
