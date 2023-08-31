@@ -3,7 +3,7 @@ import { products } from '../products'
 export const Addtocart_context=createContext(null)
 const initial_state=()=>{
   let cart={}
-    for(let i=1;i<products.length;i++){
+    for(let i=1;i<=products.length;i++){
         cart[i]=0;
     }
     return cart
