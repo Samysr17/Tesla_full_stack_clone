@@ -1,6 +1,6 @@
-import car1 from './components/car1.jpg'
-import car2 from './components/images/car2.jpg'
-import car3 from './components/images/model-3.jpg'
+import car1 from './components/Mx.png'
+// import car2 from './components/images/car2.jpg'
+// import car3 from './components/images/model-3.jpg'
 
 export const products=[
      {
@@ -16,7 +16,7 @@ export const products=[
         Name:"Model Y",
         Price:500000.0,
         Colour:["Red","Blue","Green","Black"],
-        Image:car2
+        Image:car1
 
      },
      {
@@ -40,7 +40,7 @@ export const products=[
         Name:"Model 3",
         Price:10000.0,
         Colour:["Black","Grey"],
-        Image:car3
+        Image:car1
 
      },
      {

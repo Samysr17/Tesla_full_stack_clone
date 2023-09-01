@@ -9,7 +9,7 @@ const Addtocart = () => {
   return (
     <div>
     <div className='bg-black p-[10vh] w-screen h-screen'>
-      <div className=" p-[3vh] text-2xl text-white ">Your Cart</div>
+      <div className=" p-[3vh] text-2xl text-white flex justify-center ">Your Garage</div>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
         return(
@@ -20,7 +20,7 @@ const Addtocart = () => {
     })}
     </div>
     </div>
-  )
+  )// eslint-disable-next-line
 }
 
 export default Addtocart

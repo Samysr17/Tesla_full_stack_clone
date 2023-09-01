@@ -1,14 +1,19 @@
 import React from 'react'
+import Fade from 'react-reveal'
 
 const Cartitem = (props) => {
-  const {id,Name,Price,Image}=props.data;
+  const {Name,Price,Image}=props.data;
   return (
     <div>
-      <div className="flex justify-center">
-      <img className="w-[5%] h-[5%] mt-[5%]" src={Image}></img>
-    <div className="text-white mt-[5%]">{Name}</div>
-    <div className="text-white mt-[5%]">${Price}</div>
+      <Fade left>
+      <div className="flex justify-between p-[10vh] border-2 border-white shadow-2xl ">
+      <div>
+      <img className="w-[40%] h-[100%] " src={Image} alt="/"></img>
+      </div>
+    <div className="text-white ">{Name}</div>
+    <div className="text-white ">${Price}</div>
     </div>
+    </Fade>
     </div>
   )
 }
