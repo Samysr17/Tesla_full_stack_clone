@@ -2,8 +2,14 @@ import React, { useContext } from 'react'
 import Fade from 'react-reveal'
 import { Addtocart_context } from '../context/addtocart-context';
 const Cartitem = (props) => {
-  const {Name,Price,Image}=props.data;
-  const {setitems}=useContext(Addtocart_context)
+  const {id,Name,Price,Image}=props.data;
+  const {items}=useContext(Addtocart_context)
+  let amount=items[id];
+  let total=Price;
+  const calcuate=()=>{
+    amount++;
+    total*=amount;
+  }
   return (
     <div>
       <Fade left>
@@ -18,8 +24,9 @@ const Cartitem = (props) => {
     <div className='md:flex md:flex-col text-white  space-y-4 hidden '>
     <div className="text-white text-xl">{Name}</div>
     <div className="text-white text-xl" >${Price}</div>
-    <div className="text-white text-xl" >Quantity:{setitems}</div>
-    <button className="p-1 h-8 w-10 text-black bg-white text-xl ">+</button>
+    <div className="text-white text-xl" >Total:${total}</div>
+    <div className="text-white text-xl" >Quantity:{items[id]}</div>
+    <button onClick={calcuate}  className="p-1 h-8 w-10 text-black bg-white text-xl ">+</button>
     <button className="p-1 h-8 w-10 text-black bg-white text-xl">-</button>
     </div>
     </div>
