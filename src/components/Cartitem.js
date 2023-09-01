@@ -1,6 +1,5 @@
 import React from 'react'
 import Fade from 'react-reveal'
-
 const Cartitem = (props) => {
   const {Name,Price,Image}=props.data;
   return (
@@ -14,6 +13,10 @@ const Cartitem = (props) => {
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
+    </div>
+    <div className='md:flex justify-between hidden '>
+    <div className="text-white">{Name}</div>
+    <div className="text-white  " >${Price}</div>
     </div>
     </Fade>
     </div>
