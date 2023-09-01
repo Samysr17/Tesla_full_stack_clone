@@ -6,12 +6,14 @@ const Cartitem = (props) => {
   return (
     <div>
       <Fade left>
-      <div className="flex justify-between p-[10vh] border-2 border-white shadow-2xl ">
+      <div className="flex flex-col md:flex-row justify-between md:p-[10vh]  ">
       <div>
-      <img className="w-[40%] h-[100%] " src={Image} alt="/"></img>
+      <img className="md:w-[30%] md:h-[100%] w-screen h-[100%] " src={Image} alt="/"></img>
       </div>
-    <div className="text-white ">{Name}</div>
-    <div className="text-white ">${Price}</div>
+      <div className='flex justify-between md:hidden'>
+    <div className="text-white">{Name}</div>
+    <div className="text-white  " >${Price}</div>
+    </div>
     </div>
     </Fade>
     </div>
