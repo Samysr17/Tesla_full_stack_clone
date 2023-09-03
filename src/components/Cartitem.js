@@ -17,7 +17,7 @@ const Cartitem = (props) => {
       <div>
       <img className="md:w-[30%] md:h-[100%] w-screen h-[100%] " src={Image} alt="/"></img>
       </div>
-      <div className='flex justify-between md:hidden'>
+      <div className='flex justify-center md:hidden'>
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
