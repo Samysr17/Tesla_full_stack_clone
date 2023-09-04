@@ -13,7 +13,7 @@ const Cartitem = (props) => {
   return (
     <div>
       <Fade left>
-      <div className="flex flex-col md:flex-row justify-center md:p-[10vh] border-2 border-white  ">
+      <div className="flex flex-col md:flex-row justify-center md:p-[10vh]">
       <div>
       <img className="md:w-[30%] md:h-[100%] w-screen h-[100%] " src={Image} alt="/"></img>
       </div>
