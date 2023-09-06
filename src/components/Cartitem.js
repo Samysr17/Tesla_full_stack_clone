@@ -8,10 +8,11 @@ const Cartitem = (props) => {
   let total=Price;
   const calcuate=()=>{
     amount++;
-    total*=amount;
+    total*=amount;//local storage to be implemented
   }
   return (
     <div>
+  
       <Fade left>
       <div className="flex flex-col md:flex-row justify-center md:p-[10vh]">
       <div>
