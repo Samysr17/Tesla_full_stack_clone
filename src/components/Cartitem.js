@@ -9,6 +9,8 @@ const Cartitem = (props) => {
   const calcuate=()=>{
     amount++;
     total*=amount;//local storage to be implemented
+    //wishlist
+    //ui tools to complete all
   }
   return (
     <div>
