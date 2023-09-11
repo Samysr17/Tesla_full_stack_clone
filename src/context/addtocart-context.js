@@ -1,4 +1,4 @@
-import React, { createContext,useState } from 'react'
+import React, { createContext,useState,useEffect } from 'react'
 import { products } from '../products'
 export const Addtocart_context=createContext(null)
 const initial_state=()=>{
@@ -17,6 +17,9 @@ const removefromcart=(Itemid)=>{
     setitems((prev)=>({...prev,[Itemid]:prev[Itemid]-1}));
  };
  console.log(items)
+ useEffect(()=>{
+  localStorage.setItem("addtocart",JSON.stringify(setitems.cart))
+ },[setitems.cart])
  const contextvalue={items,addtocart,removefromcart}
   return (
     <Addtocart_context.Provider value={contextvalue}>{props.children}</Addtocart_context.Provider>
