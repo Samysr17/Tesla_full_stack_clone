@@ -1,3 +1,4 @@
+Almost done authentication with firebase left!!!!!!!!!
 # Getting Started with Create React App 
 ![image](https://github.com/Samysr17/Tesla_full_stack_clone/assets/108344579/41c59223-ff9b-412f-8c49-a26f852ade7d)
 
