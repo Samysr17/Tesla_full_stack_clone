@@ -1,6 +1,6 @@
 import React, { createContext,useState,useEffect } from 'react'
 import { products } from '../products'
-export const Addtocart_context=createContext(null)//to do add to cart full functionality // firebase auth //complete final
+export const Addtocart_context=createContext(null)//to do add to cart full functionality // firebase auth //complete final /tom
 const initial_state=()=>{
   let cart={}
     for(let i=1;i<=products.length;i++){
