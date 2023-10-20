@@ -21,6 +21,7 @@ import Home3 from './components/Home3';
 import Home0 from './components/Home0';
 import Home_cart  from './Home_cart';
 import { Addtocart_contextProvider } from './context/addtocart-context';
+import SignUp from './components/SignUp';
 
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
         ,<Section4/>
         ,<Section5/>]}/>
         <Route path="/Model_S" element={<Home2/>}/>
-        <Route path="/account" element={<Signin/>} />
+        <Route path="/SignIn" element={<Signin/>} />
+        <Route path="/SignUp" element={<SignUp/>} />
         <Route path="/Solar_Roofs" element={<Home4/>}/>
         <Route path="/Powerwall" element={<Home5/>}/>
         <Route path="/Solar_Panels" element={<Home1/>}/>
