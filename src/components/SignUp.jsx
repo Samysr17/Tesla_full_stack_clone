@@ -1,23 +1,23 @@
 import React from 'react'
 import logo1 from './images/telsaw.png'
 import { useState } from 'react'
-import { UserAuth_1} from '../context/Authi_email_context'
+// import { UserAuth_1} from '../context/Authi_email_context'
 const SignUp = () => {
-    const [email,setemail]=useState('');
-    const [password,setpassword]=useState('');
-    const [error,seterror]=useState('');
-    const { CreateUser }=UserAuth_1();
-    const handleSubmit=async(e)=>{
-       e.preventDefault();
-       seterror('');
-       try{
-          await CreateUser(email,password)
-       }catch(e){
-         seterror(e.message);
-         console.log("HI");
-         console.log(e.message);
-       }
-    }
+    // const [email,setemail]=useState('');
+    // const [password,setpassword]=useState('');
+    // const [error,seterror]=useState('');
+    // const { CreateUser }=UserAuth_1();
+    // const handleSubmit=async(e)=>{
+    //    e.preventDefault();
+    //    seterror('');
+    //    try{
+    //       await CreateUser(email,password)
+    //    }catch(e){
+    //      seterror(e.message);
+    //      console.log("HI");
+    //      console.log(e.message);
+    //    }
+    // }
     
   return (
     <div>
@@ -31,11 +31,11 @@ const SignUp = () => {
         </div>
         {/* <div className="mt-12">Name</div>
         <div><input placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div> */}
-        <div onChange={(e)=>setemail(e.target.value)} className="mt-12">Email</div>
+        <div  className="mt-12">Email</div>
         <div><input placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
-        <div onChange={(e)=>setpassword(e.target.value)} className="mt-4">Password</div>
+        <div  className="mt-4">Password</div>
         <div><input placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
-        <button  onClick={handleSubmit} className='border border-blue-500 bg-blue-600 hover:bg-blue-500 w-full p-4 my-2 text-white'>
+        <button   className='border border-blue-500 bg-blue-600 hover:bg-blue-500 w-full p-4 my-2 text-white'>
           Sign Up
         </button>
         </div>

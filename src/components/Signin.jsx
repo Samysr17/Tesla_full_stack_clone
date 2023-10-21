@@ -1,18 +1,18 @@
 import React from 'react'
-import { useState} from 'react'//useffect
+import { useState} from 'react'
 import {GoogleButton} from 'react-google-button'
 import logo1 from './images/telsaw.png'
-import { UserAuth } from '../context/Authicontext'
+// import { UserAuth } from '../context/Authicontext'
 import {Link} from 'react-router-dom'
 const Signin = () => {
-    const {googleSignin}=UserAuth();
-    const handlegoogle=async()=>{
-     try{
-       await googleSignin();
-     }catch(error){
-        console.log(error);
-     }
-    }
+//     const {googleSignin}=UserAuth();
+//     const handlegoogle=async()=>{
+//      try{
+//        await googleSignin();
+//      }catch(error){
+//         console.log(error);
+//      }
+//     }
     // const [set,setuser]=useState({});//useffect for context sign out and email functionality....
   return (
     <div>
@@ -28,7 +28,7 @@ const Signin = () => {
         <div className="mt-4">Password</div>
         <div><input placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
         <div className="text-red-200 mt-16">
-              <GoogleButton onClick={handlegoogle}/>
+              <GoogleButton />
         </div>
         <div className="mt-8">_________Or__________</div>
         <button className="mt-8 bg-blue-500 text-white p-2 w-60"><Link to="/SignUp">Create Account</Link></button>
@@ -41,6 +41,7 @@ const Signin = () => {
     </div>
   )
 }
+
 
 export default Signin
 
