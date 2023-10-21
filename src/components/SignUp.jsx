@@ -1,7 +1,7 @@
 import React from 'react'
 import logo1 from './images/telsaw.png'
 import { useState } from 'react'
-import { UserAuth_1 } from '../context/Authi_email_context'
+import { UserAuth_1} from '../context/Authi_email_context'
 const SignUp = () => {
     const [email,setemail]=useState('');
     const [password,setpassword]=useState('');
