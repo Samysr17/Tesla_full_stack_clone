@@ -15,6 +15,7 @@ import Home2 from './components/Home2';
 import Home4 from './components/Home4';
 import Home5 from './components/Home5';
 import { AuthContextProvider } from './context/Authicontext';
+import { Authi_email_contextProvider } from './context/Authi_email_context'
 import Signin from './components/Signin';
 import Home1 from './components/Home1';
 import Home3 from './components/Home3';
@@ -27,6 +28,7 @@ import SignUp from './components/SignUp';
 function App() {
   return (
     <div className="">
+      <Authi_email_contextProvider>
       <AuthContextProvider>
       <Addtocart_contextProvider>
       <BrowserRouter>
@@ -51,6 +53,7 @@ function App() {
       </BrowserRouter>
       </Addtocart_contextProvider>
       </AuthContextProvider>
+      </Authi_email_contextProvider>
     </div>
   );
 }
