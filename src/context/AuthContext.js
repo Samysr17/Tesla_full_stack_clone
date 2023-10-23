@@ -16,7 +16,10 @@ export const AuthContextProvider = ({ children }) => {
   };
   const logout=()=>{
     return signOut(auth);
-  }
+  };
+  const signin=(email,password)=>{
+    return signInWithEmailAndPassword(auth,email,password)
+  };
   useEffect(()=>{
     const check=onAuthStateChanged(auth,(currentUser)=>{
       console.log(currentUser)
@@ -30,7 +33,7 @@ export const AuthContextProvider = ({ children }) => {
 
 
   return (
-    <UserContext.Provider value={{ createUser,user,logout}}>
+    <UserContext.Provider value={{ createUser,user,logout,signin}}>
         {/* pass the function (js element) */}
       {children}
     </UserContext.Provider>
