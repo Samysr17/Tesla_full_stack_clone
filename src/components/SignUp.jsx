@@ -1,22 +1,22 @@
 import React from 'react'
 import logo1 from './images/telsaw.png'
-import { useState } from 'react'
+import { useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import {UserAuth} from '../context/AuthContext'
 
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
   const { createUser } = UserAuth();
-  // const navigate = useNavigate()u
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     try {
       await createUser(email, password);
-      // navigate('/account')
+      navigate('/')
     } catch (e) {
       setError(e.message);
       console.log(e.message);

@@ -18,6 +18,7 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <UserContext.Provider value={{ createUser}}>
+        {/* pass the function (js element) */}
       {children}
     </UserContext.Provider>
   );
