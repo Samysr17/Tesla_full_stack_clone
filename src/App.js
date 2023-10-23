@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 // import Home from './components/Home';
 import Testdrive from './components/Testdrive';
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import {Routes,Route } from "react-router-dom";
 import Section from "./components/Section"
 import Section1 from "./components/Section1"
 import Section2 from "./components/Section2"
@@ -23,13 +23,14 @@ import Home0 from './components/Home0';
 import Home_cart  from './Home_cart';
 import { Addtocart_contextProvider } from './context/addtocart-context';
 import SignUp from './components/SignUp';
+import { AuthContextProvider } from './context/AuthContext';
 
 
 function App() {
   return (
     <div className="">
+      <AuthContextProvider>
       <Addtocart_contextProvider>
-      <BrowserRouter>
       <Routes>
       <Route path="/" element={[<Testdrive/>,<Header/>,
         <Section/>
@@ -48,8 +49,8 @@ function App() {
         <Route path="/Model_X" element={<Home0/>}/>
         <Route path="/addtocart" element={<Home_cart/>}/>
       </Routes>
-      </BrowserRouter>
       </Addtocart_contextProvider>
+      </AuthContextProvider>
     </div>
   );
 }
