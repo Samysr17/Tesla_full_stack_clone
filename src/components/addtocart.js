@@ -12,10 +12,10 @@ const Addtocart = () => {
       <div className=" p-[3vh] text-2xl text-white flex justify-center ">Your Garage</div>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
+        console.log(items[iterator])
         return(
          <Cartitem data={iterator}/>
         )
-
       }
     })}
     </div>
