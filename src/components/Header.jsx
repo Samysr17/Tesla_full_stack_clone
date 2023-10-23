@@ -6,6 +6,7 @@ import {HiOutlineMenuAlt4} from 'react-icons/hi'
 import logo1 from './images/telsaw.png'
 import {Link} from "react-router-dom";
 import {UserAuth} from '../context/AuthContext'
+import {useNavigate} from 'react-router-dom'
 
 
 function Header(){
@@ -27,10 +28,12 @@ const handlemenu=()=>{
   setmenu(!menu)
 }
 const {user,logout}=UserAuth();
+const navigate=useNavigate();
 const handlelogout=async()=>{
   try{
     await logout()
     console.log("logged out")
+    navigate('/SignIn')
   }catch(e){
     console.log(e.message)
   }
