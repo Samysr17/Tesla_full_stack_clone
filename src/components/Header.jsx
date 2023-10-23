@@ -26,8 +26,15 @@ const[menu,setmenu]=useState(false);
 const handlemenu=()=>{
   setmenu(!menu)
 }
-const {user}=UserAuth();
-
+const {user,logout}=UserAuth();
+const handlelogout=async()=>{
+  try{
+    await logout()
+    console.log("logged out")
+  }catch(e){
+    console.log(e.message)
+  }
+}
   
   return (
     <div>
@@ -47,9 +54,10 @@ const {user}=UserAuth();
         </div>
         <div className='hidden lg:flex mr-6 text-gray-400 cursor-pointer '>
           {/* <a href='https://shop.tesla.com/'><p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Shop</p></a> */}
-          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">User:{user && user.email}</p>
+          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">{user && user.email}</p>
+          <p  onClick={handlelogout} className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Log Out</p>
           <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/SignIn">Account</Link></p>
-          <p onClick={handlemenu}  className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Menu</p>
+          <p  onClick={handlemenu}  className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Menu</p>
           <div onClick={handlemenu} className={menu?"right-0 top-0 absolute  backdrop-blur-3xl text-white w-[25%]  px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>
           <ul className="mobile  ml-[20%] ">
           <AiOutlineClose size={24} color='white' className='ml-[90%]'/>
