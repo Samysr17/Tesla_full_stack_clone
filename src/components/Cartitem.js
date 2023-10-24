@@ -16,7 +16,7 @@ const Cartitem = (props) => {
   // }
   //need to have the total sum and the UI
   return (
-    <div>
+    <div className='bg-black '>
       <Fade left>
       <div className="flex flex-col md:flex-row justify-center md:p-[10vh]">
       <div>
@@ -26,7 +26,7 @@ const Cartitem = (props) => {
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
-    <div className='md:flex md:flex-col text-white  space-y-4 hidden '>
+    <div className='md:flex md:flex-col text-white  space-y-1 hidden '>
     <div className="text-white text-xl">{Name}</div>
     <div className="text-white text-xl" >${Price}</div>
     <div className="text-white text-xl" >Total:${total*number}</div>
