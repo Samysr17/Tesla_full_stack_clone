@@ -3,15 +3,17 @@ import Fade from 'react-reveal'
 import { Addtocart_context } from '../context/addtocart-context';
 const Cartitem = (props) => {
   const {id,Name,Price,Image}=props.data;
-  const {items}=useContext(Addtocart_context)
-  let amount=items[id];
+  const {items,addtocart,removefromcart}=useContext(Addtocart_context)
+  const number=items[id];
+  // let amount=items[id];
+
   let total=Price;
-  const calcuate=()=>{
-    amount++;
-    total*=amount;//local storage to be implemented
-    //wishlist
-    //ui tools to complete all
-  }
+  // const calcuate=()=>{ 
+  //   amount++;
+  //   total*=amount;//local storage to be implemented
+  //   //wishlist
+  //   //ui tools to complete all
+  // }
   return (
     <div>
   
@@ -27,10 +29,10 @@ const Cartitem = (props) => {
     <div className='md:flex md:flex-col text-white  space-y-4 hidden '>
     <div className="text-white text-xl">{Name}</div>
     <div className="text-white text-xl" >${Price}</div>
-    <div className="text-white text-xl" >Total:${total}</div>
-    <div className="text-white text-xl" >Quantity:{items[id]}</div>
-    <button onClick={calcuate}  className="p-1 h-8 w-10 text-black bg-white text-xl ">+</button>
-    <button className="p-1 h-8 w-10 text-black bg-white text-xl">-</button>
+    <div className="text-white text-xl" >Total:${total*number}</div>
+    <div className="text-white text-xl" >Quantity:{number>0 && number}</div>
+    <button onClick={()=>{addtocart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-xl ">+</button>
+    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-xl">-</button>
     </div>
     </div>
     </Fade>
