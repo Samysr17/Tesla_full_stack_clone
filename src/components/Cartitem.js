@@ -14,9 +14,9 @@ const Cartitem = (props) => {
   //   //wishlist
   //   //ui tools to complete all
   // }
+  //need to have the total sum and the UI
   return (
     <div>
-  
       <Fade left>
       <div className="flex flex-col md:flex-row justify-center md:p-[10vh]">
       <div>
