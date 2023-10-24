@@ -20,8 +20,9 @@ const Addtocart = () => {
       }
     })}
     </div>
-    <div>
-      <p className='text-white bg-black text-xl flex justify-center'>Price:{subtotal}</p>
+    <div className='flex justify-center bg-black '>
+      <p className='text-white  text-xl mr-[5%] '>Price:{subtotal}</p>
+      <button className='text-white text-xl cursor-pointer'>Checkout</button>
     </div>
     </div>
   )// eslint-disable-next-line
