@@ -18,25 +18,31 @@ const Cartitem = (props) => {
   return (
     <div className='bg-black '>
       <Fade left>
-      <div className="flex flex-col md:flex-row justify-center md:p-[10vh]">
-      <div>
-      <img className="md:w-[30%] md:h-[100%] w-screen h-[100%] " src={Image} alt="/"></img>
-      </div>
       <div className='flex justify-center md:hidden'>
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
-    <div className='md:flex md:flex-col text-white  space-y-1 hidden '>
+    <div className='md:flex md:flex-col text-white ml-[10%]  space-y-4 hidden p-16 border-2 border-white w-[80%] '>
+    <div className="flex justify-between">
+    <div className="ml-[30%]">
     <div className="text-white text-xl">{Name}</div>
-    <div className="text-white text-xl" >${Price}</div>
-    <div className="text-white text-xl" >Total:${total*number}</div>
-    <div className="text-white text-xl" >Quantity:{number>0 && number}</div>
-    <button onClick={()=>{addtocart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-xl ">+</button>
-    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-xl">-</button>
+    <div>Image</div>
+    </div>
+    <div className="mr-[30%] ">
+    <div className="text-white text-2xl text-bold " >${Price}</div>
+    {/* <div className="text-white text-xl" >Subtotal:${total*number}</div> */}
+    <div className="flex space-x-4 mt-8">
+    <div className="text-white text-sm" >Quantity:</div>
+    <button onClick={()=>{addtocart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-sm ">+</button>
+    <div className="text-white text-xl" >{number>0 && number}</div>
+    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-sm">-</button>
+    </div>
+    </div>
     </div>
     </div>
     </Fade>
     </div>
+    
   )
 }
 

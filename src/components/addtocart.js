@@ -9,8 +9,8 @@ const Addtocart = () => {
   const subtotal=getotal()
   return (
     <div>
-    <div className='bg-black  w-screen h-screen'>
-      <div className=" p-[3vh] text-2xl text-white flex justify-center ">Your Garage</div>
+    <div className='bg-black  w-screen h-screen p-[3vh] '>
+      <div className="  text-2xl text-white flex justify-center mt-[10%] mb-[5%]">Your Cart </div>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
         console.log(items[iterator])
