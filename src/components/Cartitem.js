@@ -22,14 +22,14 @@ const Cartitem = (props) => {
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
-    <div className='md:flex md:flex-col text-white ml-[10%]  space-y-4 hidden p-16 border-2 border-white w-[80%] '>
+    <div className='md:flex md:flex-col text-white ml-[20%]  space-y-4 hidden p-16 border-2 rounded-2xl border-white w-[60%] '>
     <div className="flex justify-between">
-    <div className="ml-[30%]">
+    <div className="ml-[20%]">
     <div className="text-white text-xl">{Name}</div>
     <div>Image</div>
     </div>
-    <div className="mr-[30%] ">
-    <div className="text-white text-2xl text-bold " >${Price}</div>
+    <div className="mr-[20%] ">
+    <div className="text-white text-2xl text-bold ml-[50%] " >${Price}</div>
     {/* <div className="text-white text-xl" >Subtotal:${total*number}</div> */}
     <div className="flex space-x-4 mt-8">
     <div className="text-white text-sm" >Quantity:</div>
@@ -41,6 +41,7 @@ const Cartitem = (props) => {
     </div>
     </div>
     </Fade>
+    <div className="h-8 bg-black"></div>
     </div>
     
   )
