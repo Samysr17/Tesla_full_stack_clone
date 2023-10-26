@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useContext } from 'react'
 // import logo from './images/logopng.png'
 import {AiOutlineClose} from 'react-icons/ai'
 import {HiOutlineMenuAlt4} from 'react-icons/hi'
@@ -7,9 +7,13 @@ import logo1 from './images/telsaw.png'
 import {Link} from "react-router-dom";
 import {UserAuth} from '../context/AuthContext'
 import {useNavigate} from 'react-router-dom'
+import { Addtocart_context } from '../context/addtocart-context';
 
 
 function Header(){
+  //  const {id,Name,Price,Image}=props.data;
+  //  const {items}=useContext(Addtocart_context)
+  //  const number=items[id];
   // const [color,setcolor]=useState[false]
   // const changecolor=()=>{
   //   if(window.scrollY>90){
@@ -59,12 +63,13 @@ const handlelogout=async()=>{
           {/* <a href='https://shop.tesla.com/'><p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Shop</p></a> */}
           <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">{user && user.email}</p>
           <p  onClick={handlelogout} className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Log Out</p>
-          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/SignIn">Account</Link></p>
+          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/addtocart">Cart</Link> ()</p>
           <p  onClick={handlemenu}  className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Menu</p>
           <div onClick={handlemenu} className={menu?"right-0 top-0 absolute  backdrop-blur-3xl text-white w-[25%]  px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>
           <ul className="mobile  ml-[20%] ">
           <AiOutlineClose size={24} color='white' className='ml-[90%]'/>
           <li className="w-40 mt-12 "><img src={logo1} alt="" size={10} /></li>
+            <p className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-16 "><Link to="/SignIn"> Your Account</Link></p>
             <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-16">Existing Inventory</li>
             <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Used Inventory</li>
             <li className="hover:ease-in duration-300 hover:text-white hover:text-xl  mt-4">Trade-In</li>

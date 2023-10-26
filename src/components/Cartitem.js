@@ -29,13 +29,13 @@ const Cartitem = (props) => {
     <div>Image</div>
     </div>
     <div className="mr-[20%] ">
-    <div className="text-white text-2xl text-bold ml-[50%] " >${Price}</div>
+    <div className="text-white text-2xl text-bold ml-[50%] " >${Price*number}</div>
     {/* <div className="text-white text-xl" >Subtotal:${total*number}</div> */}
     <div className="flex space-x-4 mt-8">
     <div className="text-white text-sm" >Quantity:</div>
-    <button onClick={()=>{addtocart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-sm ">+</button>
+    <button onClick={()=>{addtocart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-md ">+</button>
     <div className="text-white text-xl" >{number>0 && number}</div>
-    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-sm">-</button>
+    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-md">-</button>*
     </div>
     </div>
     </div>
