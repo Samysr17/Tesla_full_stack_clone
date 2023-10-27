@@ -5,7 +5,7 @@ const Cartitem = (props) => {
   const {id,Name,Price,Image}=props.data;
   const {items,addtocart,removefromcart}=useContext(Addtocart_context)
   const number=items[id];
-  // let amount=items[id];
+  
 
   let total=Price;
   // const calcuate=()=>{ 
