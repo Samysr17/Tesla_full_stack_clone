@@ -1,6 +1,9 @@
 import car1 from './components/Mx.png'
-// import car2 from './components/images/car2.jpg'
-// import car3 from './components/images/model-3.jpg'
+import car2 from './components/images/Modely.png'
+import roof from './components/images/s_roof.png'
+import panel from './components/images/s_panel.png'
+import powerwall from './components/images/powerwall.png'
+import car3 from './components/images/model3.png'
 
 export const products=[
      {
@@ -16,7 +19,7 @@ export const products=[
         Name:"Model Y",
         Price:500000.0,
         Colour:["Red","Blue","Green","Black"],
-        Image:car1
+        Image:car2
 
      },
      {
@@ -24,7 +27,7 @@ export const products=[
         Name:"Solar Panel",
         Price:3000.0,
         Colour:["Black","Grey"],
-        Image:""
+        Image:panel
 
      },
      {
@@ -32,7 +35,7 @@ export const products=[
         Name:"Solar Roof",
         Price:20000.0,
         Colour:["Black","Grey"],
-        Image:""
+        Image:roof
 
      },
      {
@@ -40,7 +43,7 @@ export const products=[
         Name:"Model 3",
         Price:10000.0,
         Colour:["Black","Grey"],
-        Image:car1
+        Image:car3
 
      },
      {
@@ -48,7 +51,7 @@ export const products=[
         Name:"PowerWall",
         Price:10000.0,
         Colour:["Black","Grey"],
-        Image:""
+        Image:powerwall
 
      }
 

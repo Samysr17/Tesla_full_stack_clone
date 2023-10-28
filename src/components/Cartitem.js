@@ -22,11 +22,11 @@ const Cartitem = (props) => {
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
-    <div className='md:flex md:flex-col text-white ml-[20%]  space-y-4 hidden p-16  w-[80%] '>
+    <div className='md:flex md:flex-col text-white ml-[10%]   space-y-4 hidden p-16  w-[80%] '>
     <div className="flex justify-between">
-    <div className="ml-[20%]">
+    <div className="">
     <div className="text-white text-xl">{Name}</div>
-    <div>Image</div>
+    <img className="w-[80%]" src={Image}/>
     </div>
     <div className="mr-[20%] ">
     <div className="text-white text-2xl text-bold ml-[50%] " >${Price*number}</div>
