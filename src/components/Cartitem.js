@@ -16,13 +16,13 @@ const Cartitem = (props) => {
   // }
   //need to have the total sum and the UI
   return (
-    <div className='bg-black '>
+    <div>
       <Fade left>
       <div className='flex justify-center md:hidden'>
     <div className="text-white">{Name}</div>
     <div className="text-white  " >${Price}</div>
     </div>
-    <div className='md:flex md:flex-col text-white ml-[20%]  space-y-4 hidden p-16 border-2 rounded-2xl border-white w-[60%] '>
+    <div className='md:flex md:flex-col text-white ml-[20%]  space-y-4 hidden p-16  w-[80%] '>
     <div className="flex justify-between">
     <div className="ml-[20%]">
     <div className="text-white text-xl">{Name}</div>
@@ -35,7 +35,7 @@ const Cartitem = (props) => {
     <div className="text-white text-sm" >Quantity:</div>
     <button onClick={()=>{addtocart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-md ">+</button>
     <div className="text-white text-xl" >{number>0 && number}</div>
-    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-md">-</button>*
+    <button onClick={()=>{removefromcart(id)}}  className="p-1 h-8 w-10 text-black bg-white text-md">-</button>
     </div>
     </div>
     </div>

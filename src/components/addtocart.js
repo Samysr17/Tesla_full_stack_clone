@@ -8,8 +8,8 @@ const Addtocart = () => {
   const {getotal}=useContext(Addtocart_context)
   const subtotal=getotal()
   return (
-    <div>
-    <div className='bg-black  w-screen h-screen p-[3vh] '>
+    <div className="flex justify-between">
+    <div className='bg-black  w-[70%] min-h-screen max-h-[300vh] p-[3vh] '>
       <div className="  text-2xl text-white flex justify-center mt-[8%] mb-[5%]">Your Cart </div>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
@@ -20,12 +20,15 @@ const Addtocart = () => {
       }
     })}
     </div>
-    <div className='flex justify-center bg-black '>
-      <p className='text-white  text-xl mr-[5%] '>Price:{subtotal}</p>
+    <div className=' bg-black max-h-[300vh] w-[40%]  '>
+      <div className="w-[90%] border-2 border-white rounded-md h-[30%] flex flex-col space-y-4 justify-center mt-[32%] sticky ">
+      <p className='text-white  text-3xl text-center  '>Order Summary</p> 
+      <p className='text-white  text-xl  '>Price:{subtotal}</p>
       <button className='text-white text-xl cursor-pointer'>Checkout</button>
+      </div>
     </div>
     </div>
-  )// eslint-disable-next-line
+  )
 }
 
 export default Addtocart
