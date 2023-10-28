@@ -21,10 +21,21 @@ const Addtocart = () => {
     })}
     </div>
     <div className=' bg-black max-h-[300vh] w-[40%]  '>
-      <div className="w-[90%] border-2 border-white rounded-md h-[30%] flex flex-col space-y-4 justify-center mt-[32%] sticky ">
-      <p className='text-white  text-3xl text-center  '>Order Summary</p> 
-      <p className='text-white  text-xl  '>Price:{subtotal}</p>
-      <button className='text-white text-xl cursor-pointer'>Checkout</button>
+      <div className="w-[90%]  flex flex-col space-y-8 justify-center mt-[32%] sticky ">
+      <p className='text-white  text-3xl text-center  '>Order Summary</p>
+      <div className="flex justify-between">
+      <p className='text-white text-center   text-xl  '>Subtotal:</p>
+      <p className='text-white text-center   text-xl  '>{subtotal}</p>
+      </div>
+      <div className="flex justify-between">
+      <p className="text-white text-center   text-xl ">Tax:</p>
+      <p className="text-white text-center   text-xl ">{subtotal*0.005}</p>
+      </div> 
+      <div className="flex justify-between">
+      <p className="text-white  text-center  text-xl ">Total:</p>
+      <p className="text-white  text-center  text-xl ">{subtotal+subtotal*0.005}</p>
+      </div>
+      <button className=' bg-white p-3 rounded-md text-xl cursor-pointer'>Checkout</button>
       </div>
     </div>
     </div>
