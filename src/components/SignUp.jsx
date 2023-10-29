@@ -6,6 +6,7 @@ import {UserAuth} from '../context/AuthContext'
 
 
 const Signup = () => {
+  const [Name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -33,8 +34,8 @@ const Signup = () => {
         <div className="flex justify-between">
         <div className="mt-24 text-4xl ml-0" >Sign Up </div>
         </div>
-        {/* <div className="mt-12">Name</div>
-        <div><input placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div> */}
+        <div className="mt-12">Name</div>
+        <div><input onChange={(e)=>setName(e.target.value)} placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
         <div  className="mt-12">Email</div>
         <div><input onChange={(e)=>setEmail(e.target.value)} placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
         <div  className="mt-4">Password</div>
