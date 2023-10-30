@@ -17,9 +17,25 @@ const Signup = () => {
     setError('');
     try {
       await createUser(email, password);
+      await fetch(
+        "https://tesla-e-com-default-rtdb.firebaseio.com/userdata.json",
+        {
+          method:"POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body:JSON.stringify({
+            Name,
+            email,
+            password
+          })
+        }
+       
+      )
       navigate('/')
     } catch (e) {
       setError(e.message);
+      window.alert(e.message)
       console.log(e.message);
     }
   };
