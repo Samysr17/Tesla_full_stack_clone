@@ -17,6 +17,8 @@ const Addtocart = () => {
         return(
          <Cartitem data={iterator}/>
         )
+      }else{
+        <div className="text-xl text-white">Hoho nothing to show here!!!! add something bitch</div>
       }
     })}
     </div>
