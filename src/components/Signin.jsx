@@ -25,7 +25,7 @@ const Signin = () => {
       navigate('/')
     }catch(e){
       setError('');
-      // window.alert("sign in error occured Create anaccount instead")
+      
       console.log(e.message);
     }
     

@@ -8,7 +8,6 @@ import {Link} from "react-router-dom";
 import {UserAuth} from '../context/AuthContext'
 import {useNavigate} from 'react-router-dom'
 import { Addtocart_context } from '../context/addtocart-context';
-import number from './Cartitem'
 
 
 function Header(){
@@ -61,7 +60,7 @@ const handlelogout=async()=>{
           {/* <a href='https://shop.tesla.com/'><p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Shop</p></a> */}
           <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">{user && user.email}</p>
           <p  onClick={handlelogout} className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Log Out</p>
-          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/addtocart">Cart{number>0 && number}</Link> ()</p>
+          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/addtocart">Cart</Link> ()</p>
           <p  onClick={handlemenu}  className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Menu</p>
           <div onClick={handlemenu} className={menu?"right-0 top-0 absolute  backdrop-blur-3xl text-white w-[25%]  px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>
           <ul className="mobile  ml-[20%] ">
