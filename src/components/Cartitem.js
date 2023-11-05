@@ -19,8 +19,18 @@ const Cartitem = (props) => {
     <div>
       <Fade left>
       <div className='flex justify-center md:hidden'>
+      <div className="flex flex-col space-y-4">
     <div className="text-white">{Name}</div>
-    <div className="text-white  " >${Price}</div>
+    <img className="w-[60%]" src={Image}/>
+    </div>
+    <div className="flex flex-col space-y-2 ">
+    <div className="text-white" >${Price}</div>
+    <div className="flex space-x-2">
+    <button onClick={()=>{addtocart(id)}}  className="p-0.5 h-4 w-5 text-black bg-white text-sm ">+</button>
+    <div className="text-white text-xl" >{number>0 && number}</div>
+    <button onClick={()=>{removefromcart(id)}}  className="p-0.5 h-4 w-5 text-black bg-white text-sm">-</button>
+    </div>
+    </div>
     </div>
     <div className='md:flex md:flex-col text-white ml-[10%]   space-y-4 hidden p-16  w-[80%] '>
     <div className="flex justify-between">

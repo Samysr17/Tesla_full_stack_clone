@@ -4,6 +4,7 @@ import { products } from '../products'
 import { Addtocart_context } from '../context/addtocart-context'
 import Cartitem from './Cartitem'
 import { Link } from 'react-router-dom'
+import { Fade } from 'react-reveal'
 const Addtocart = () => {
   const {items}=useContext(Addtocart_context);
   const {getotal}=useContext(Addtocart_context)
@@ -12,15 +13,23 @@ const Addtocart = () => {
   const Check=()=>{
     if(state===false){
     return(
-      <div className="text-white text-2xl">Hoho Nothing to show here !!!</div>
+      <Fade left>
+      <div className="text-white text-xl  md:text-3xl">Garage is Empty !!!</div>
+      </Fade>
       
       );
     }
   }
   return (
+    <div>
     <div className="flex justify-between bg-black">
     <div className='  w-[80%] min-h-screen max-h-[500vh] p-[3vh] '>
-      <div className="  text-3xl text-white flex justify-center mt-[10%] text-center ml-[40%] mb-[5%]">Your Cart </div>
+    <Fade left>
+      <div className=" text-xl  md:text-3xl text-white flex justify-center mt-[40%] md:mt-[10%] ml-[20%] text-center md:ml-[40%] mb-[5%]">Your Garage </div>
+      </Fade>
+      <div className=" text-white flex justify-center mt-[20%] md:mt-[10%] ml-[20%] md:ml-[40%] mb-[5%]">
+    <Check/>
+    </div>
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
         state=true;
@@ -31,10 +40,8 @@ const Addtocart = () => {
       }
     })}
     </div>
-    <div className="">
-    <Check/>
-    </div>
-    <div className=' bg-black max-h-[500vh] w-[40%] sticky '>
+    <Fade right>
+    <div className='hidden md:flex bg-black max-h-[500vh] w-[40%] sticky '>
       <div className="w-[90%] hidden  md:flex flex-col space-y-8 justify-center mt-[50%]  ">
       <p className='text-white  text-2xl text-center  '>Order Summary</p>
       <div className="flex justify-between border-t-2">
@@ -53,6 +60,8 @@ const Addtocart = () => {
       <button  className=' bg-transaprent text-white border-2 border-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'>Checkout</button>
       <button className='  bg-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'><Link to="/">Continue Shopping</Link></button>
       </div>
+    </div>
+    </Fade>
     </div>
     </div>
   )
