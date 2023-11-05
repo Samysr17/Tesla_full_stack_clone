@@ -40,6 +40,26 @@ const Addtocart = () => {
       }
     })}
     </div>
+    <div className='flex bg-black max-h-[500vh] w-[40%] sticky '>
+      <div className="w-[90%] hidden  md:flex flex-col space-y-8 justify-center mt-[50%]  ">
+      <p className='text-white  text-2xl text-center  '>Order Summary</p>
+      <div className="flex justify-between border-t-2">
+      <p className='text-white text-center   text-xl  '>Subtotal:</p>
+      <p className='text-white text-center text-xl     '>{subtotal}</p>
+      
+      </div>
+      <div className="flex justify-between border-t-2">
+      <p className="text-white text-center   text-xl ">Tax:</p>
+      <p className="text-white text-center   text-xl ">{subtotal*0.005}</p>
+      </div> 
+      <div className="flex justify-between border-t-2 ">
+      <p className="text-white  text-center  text-xl ">Total:</p>
+      <p className="text-white  text-center  text-xl ">{subtotal+subtotal*0.005}</p>
+      </div>
+      <button  className=' bg-transaprent text-white border-2 border-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'>Checkout</button>
+      <button className='  bg-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'><Link to="/">Continue Shopping</Link></button>
+      </div>
+    </div>
     <Fade right>
     <div className='hidden md:flex bg-black max-h-[500vh] w-[40%] sticky '>
       <div className="w-[90%] hidden  md:flex flex-col space-y-8 justify-center mt-[50%]  ">
