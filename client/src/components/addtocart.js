@@ -21,10 +21,11 @@ const Addtocart = () => {
       );
     }
   }
+   //payment gateway integration
   // const payment=async()=>{
   //   const stripe = await loadStripe('pk_test_51OB9TcSB3m3uX235oYnbAGt7I1TflMXxSLco872UxB27EUY0KqPVTnXHR9z8V5OxPbeV0ZQpYz7rWDY7UKsTPriH005xaPamUu');
   //   const body={
-  //     products:carts
+  //     products:carts //product array added  into the cart sent to backend server
   //   }
   //   const headers={
   //     "Content-Type":"application/json"
