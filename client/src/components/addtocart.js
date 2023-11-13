@@ -23,27 +23,27 @@ const Addtocart = () => {
   }
   //cosoling cart items
    //payment gateway integration
-  // const payment=async()=>{
-  //   const stripe = await loadStripe('pk_test_51OB9TcSB3m3uX235oYnbAGt7I1TflMXxSLco872UxB27EUY0KqPVTnXHR9z8V5OxPbeV0ZQpYz7rWDY7UKsTPriH005xaPamUu');
-  //   const body={
-  //     products:carts //product array added  into the cart sent to backend server
-  //   }
-  //   const headers={
-  //     "Content-Type":"application/json"
-  //   }
-  //   const response=await fetch("http://localhost:7000/api/create-checkout-session",{
-  //     method:"POST",
-  //     headers:headers,
-  //     body:JSON.stringify(body)
-  //   });
-  //   const session=await response.json();
-  //   const result=stripe.redirectToCheckout({
-  //     sessionId:session.id
-  //   })
-  //   if(result.error){
-  //     console.log(result.error)
-  //   }
-  // }
+  const payment=async()=>{
+    const stripe = await loadStripe('pk_test_51OB9TcSB3m3uX235oYnbAGt7I1TflMXxSLco872UxB27EUY0KqPVTnXHR9z8V5OxPbeV0ZQpYz7rWDY7UKsTPriH005xaPamUu');
+    const body={
+      product:subtotal+(subtotal*0.05)
+    }
+    const headers={
+      "Content-Type":"application/json"
+    }
+    const response=await fetch("http://localhost:7000/api/create-checkout-session",{
+      method:"POST",
+      headers:headers,
+      body:JSON.stringify(body)
+    });
+    const session=await response.json();
+    const result=stripe.redirectToCheckout({
+      sessionId:session.id
+    })
+    if(result.error){
+      console.log(result.error)
+    }
+  }
   return (
     <div>
     <div className="flex justify-between bg-black">
@@ -58,7 +58,7 @@ const Addtocart = () => {
       if(items[iterator.id]!==0){
         state=true;
         // console.log(items[iterator])
-        console.log(items)
+        console.log(items[iterator.id])
         console.log(subtotal)
         console.log(iterator)
         return(
@@ -102,9 +102,9 @@ const Addtocart = () => {
       </div> 
       <div className="flex justify-between border-t-2 ">
       <p className="text-white  text-center  text-xl ">Total:</p>
-      <p className="text-white  text-center  text-xl ">{subtotal+subtotal*0.005}</p>
+      <p className="text-white  text-center  text-xl ">{subtotal+(subtotal*0.005)}</p>
       </div>
-      <button  className=' bg-transaprent text-white border-2 border-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'>Checkout</button>
+      <button onClick={payment}  className=' bg-transaprent text-white border-2 border-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'>Checkout</button>
       <button className='  bg-white p-3 rounded-md text-xl hover:w-[80%] hover:ml-[10%] hover:ease-in cursor-pointer'><Link to="/">Continue Shopping</Link></button>
       </div>
     </div>

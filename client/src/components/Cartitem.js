@@ -19,7 +19,7 @@ const Cartitem = (props) => {
     <div className="text-white" >${Price}</div>
     <div className="flex space-x-2">
     <button onClick={()=>{addtocart(id)}}  className=" w-[90%] h-[90%] text-black bg-white text-sm ">+</button>
-    <div className="text-white text-xl" >{number>0 && number && }</div>
+    <div className="text-white text-xl" >{number>0 && number}</div>
     <button onClick={()=>{removefromcart(id)}}  className=" w-[80%] h-[90%] text-black bg-white text-xl">-</button>
     </div>
     </div>
