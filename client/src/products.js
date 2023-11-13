@@ -11,7 +11,7 @@ export const products=[
         Name:"Model X",
         Price:150000.0,
         Colour:["Red","Blue","Green","Black"],
-        Image:car1
+        Image:car1,
 
      },
      {
@@ -19,7 +19,7 @@ export const products=[
         Name:"Model Y",
         Price:500000.0,
         Colour:["Red","Blue","Green","Black"],
-        Image:car2
+        Image:car2,
 
      },
      {
@@ -27,7 +27,7 @@ export const products=[
         Name:"Solar Panel",
         Price:3000.0,
         Colour:["Black","Grey"],
-        Image:panel
+        Image:panel,
 
      },
      {
@@ -35,7 +35,7 @@ export const products=[
         Name:"Solar Roof",
         Price:20000.0,
         Colour:["Black","Grey"],
-        Image:roof
+        Image:roof,
 
      },
      {
@@ -43,7 +43,7 @@ export const products=[
         Name:"Model 3",
         Price:10000.0,
         Colour:["Black","Grey"],
-        Image:car3
+        Image:car3,
 
      },
      {
@@ -51,7 +51,7 @@ export const products=[
         Name:"PowerWall",
         Price:10000.0,
         Colour:["Black","Grey"],
-        Image:powerwall
+        Image:powerwall,
 
      }
 

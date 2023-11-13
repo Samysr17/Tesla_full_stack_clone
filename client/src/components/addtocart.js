@@ -57,7 +57,10 @@ const Addtocart = () => {
     {products.map((iterator)=>{
       if(items[iterator.id]!==0){
         state=true;
-        console.log(items[iterator])
+        // console.log(items[iterator])
+        console.log(items)
+        console.log(subtotal)
+        console.log(iterator)
         return(
          <Cartitem data={iterator}/>
         )
