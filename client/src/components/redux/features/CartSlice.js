@@ -12,7 +12,8 @@ const cartSlice = createSlice({
 
         // add to cart
         addToCart: (state, action) => {
-
+        //   console.log(action)
+        state.carts=[...state.carts,action.payload]
         },
 
     }
