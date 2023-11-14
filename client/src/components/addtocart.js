@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-
-
 import { Fade } from 'react-reveal'
 import {loadStripe} from '@stripe/stripe-js';
 import { useSelector } from 'react-redux'
@@ -76,12 +74,12 @@ const Addtocart = () => {
 }
   return (
     <>
-    <div className='row justify-content-center m-0 bg-black text-white h-screen'>
-      <div className='col-md-8 mt-5 mb-5 cardsdetails'>
-        <div className="card">
+    <div className='bg-black text-white h-screen'>
+      <div className='s'>
+        <div className="">
           <div className="card-header bg-dark p-3">
             <div className='card-header-flex'>
-              <h5 className='text-white m-0'>Cart Calculation{carts.length >0 ? `(${carts.length})` : ""}</h5>
+              <h5 className='text-white m-0'>{carts.length >0 ? `(${carts.length})` : ""}</h5>
               {carts.length > 0 ? (
                 <button onClick={remove_all} className="bg-white cursor-pointer ml-[50vh] mt-16 text-black rounded-sm " >Empty Cart</button>
               ) : ""}
@@ -89,64 +87,41 @@ const Addtocart = () => {
           </div>
           <div className="card-body p-0">
             {carts.length === 0 ? (
-              <table className='table cart-table mb-0'>
-                <tbody>
-                  <tr>
-                    <td colSpan={6}>
-                      <div className='cart-empty'>
-                        <i className='fa fa-shopping-cart'></i>
-                        <p>Your Cart Is Empty</p>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                 <div className='flex justify-center mt-[25vh] text-3xl'>
+                 <p>Your Cart Is Empty!!!</p>
+                </div>
             ) : (
-              <table className='table cart-table mb-0 table-responsive-sm'>
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th className='text-right'>
-                      <span id="amount" className='amount'>Total Amount</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {carts.map((data, index) => (
-                    <tr key={index}>
-                      <td>
-                        <button onClick={()=>remove(data.id)} className='text-black bg-white rounded-sm p-1'>remove
-                        </button>
-                      </td>
-                      <td><div className='product-img'><img src={data.Image} alt="" /></div></td>
-                      <td><div className='product-name'><p>{data.Name}</p></div></td>
-                      <td>{data.Price}</td>
-                      <td>
-                        <div className="flex space-x-2">
+              <div className='flex flex-col justify-center'>
+                <div>
+                  {carts.map((data) => (
+                    <div className="flex justify-between h-[25%] w-[60%] ml-[20%] ">
+                      <div>
+                        <button onClick={()=>remove(data.id)} className='text-black bg-white rounded-sm p-1'>remove</button>
+                      </div>
+                      <div className='w-40 h-40'><img src={data.Image} alt="" /></div>
+                      <div className='product-name'><p>{data.Name}</p></div>
+                      <div>{data.Price}</div>
+                      <div>
+                        <div className="flex space-x-4">
                           <button onClick={()=>increment(data)} className='p-2 rounded-sm bg-white text-black  '>+</button>
                           <button onClick={data.quantity<=1?()=>remove(data.id):()=>minus(data)} className='p-2 rounded-sm bg-white text-black' >-</button>
                         </div>
-                      </td>
+                      </div>
                       <td className='text-white'>{data.quantity}</td>
                       <td className='text-white'>${data.Price*data.quantity}</td>
-                    </tr>
+                    </div>
                   ))}
-                </tbody>
+                </div>
                 <tfoot>
-                  <tr>
-                    <th></th>
-                    <th colSpan={3}></th>
+                  <tr className="flex justify-between ml-[20%] w-[60%]">
                     <th>Items In Cart <span className='ml-2 mr-2'>:</span><span className='text-danger'>{totq}</span></th>
                     <th className='text-right'>Total Price<span className='ml-2 mr-2'>:</span><span className='text-danger'>${totalprice} </span></th>
+                    <button onClick={payment} className="bg-white text-black p-2">Checkout</button>
                   </tr>
                 </tfoot>
-              </table>
+              </div>
             )}
           </div>
-          <button onClick={payment} className="bg-white text-black p-2">Checkout</button>
         </div>
       </div>
     </div>
