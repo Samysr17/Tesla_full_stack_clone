@@ -1,13 +1,21 @@
 import React from 'react'
-import {useContext} from 'react'
 import { products } from '../products'
 import { Link } from 'react-router-dom'
 import { Fade } from 'react-reveal'
 import {loadStripe} from '@stripe/stripe-js';
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { addToCart,removefromcart } from './redux/features/CartSlice'
 const Addtocart = () => {
   const {carts}=useSelector((state)=>state.allCart)
   console.log(carts)
+  const dispatch=useDispatch();
+  const increment=(e)=>{
+    dispatch(addToCart(e))
+  }
+  const remove=(e)=>{
+    dispatch(removefromcart(e))
+  }
   //cosoling cart items
    //payment gateway integration
   // const payment=async()=>{
@@ -33,7 +41,7 @@ const Addtocart = () => {
   // }
   return (
     <>
-    <div className='row justify-content-center m-0'>
+    <div className='row justify-content-center m-0 bg-black text-white h-screen'>
       <div className='col-md-8 mt-5 mb-5 cardsdetails'>
         <div className="card">
           <div className="card-header bg-dark p-3">
@@ -64,7 +72,6 @@ const Addtocart = () => {
               <table className='table cart-table mb-0 table-responsive-sm'>
                 <thead>
                   <tr>
-                    <th>Action</th>
                     <th>Product</th>
                     <th>Name</th>
                     <th>Price</th>
@@ -78,8 +85,7 @@ const Addtocart = () => {
                   {carts.map((data, index) => (
                     <tr key={index}>
                       <td>
-                        <button className='prdct-delete'>
-                          <i className='fa fa-trash-alt'></i>
+                        <button onClick={()=>remove(data.id)} className='text-black bg-white rounded-sm p-1'>remove
                         </button>
                       </td>
                       <td><div className='product-img'><img src={data.Image} alt="" /></div></td>
@@ -87,16 +93,15 @@ const Addtocart = () => {
                       <td>{data.Price}</td>
                       <td>
                         <div className="prdct-qty-container">
-                          <button className='prdct-qty-btn' type='button'>
-                            <i className='fa fa-minus'></i>
-                          </button>
+                          <button onClick={()=>increment(data)} className='p-2 rounded-sm bg-white text-black  '>+</button>
                           <input type="text" className='qty-input-box'  disabled name="" id="" />
                           <button className='prdct-qty-btn' type='button' >
                             <i className='fa fa-plus'></i>
                           </button>
                         </div>
                       </td>
-                      <td className='text-right'>₹</td>
+                      <td className='text-white'>{data.quantity}</td>
+                      <td className='text-white'>${data.Price*data.quantity}</td>
                     </tr>
                   ))}
                 </tbody>

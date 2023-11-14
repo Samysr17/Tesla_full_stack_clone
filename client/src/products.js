@@ -12,6 +12,7 @@ export const products=[
         Price:150000.0,
         Colour:["Red","Blue","Green","Black"],
         Image:car1,
+        quantity:0
 
      },
      {
@@ -20,7 +21,7 @@ export const products=[
         Price:500000.0,
         Colour:["Red","Blue","Green","Black"],
         Image:car2,
-
+        quantity:0
      },
      {
         id:5,
@@ -28,7 +29,7 @@ export const products=[
         Price:3000.0,
         Colour:["Black","Grey"],
         Image:panel,
-
+        quantity:0
      },
      {
         id:4,
@@ -36,7 +37,7 @@ export const products=[
         Price:20000.0,
         Colour:["Black","Grey"],
         Image:roof,
-
+        quantity:0
      },
      {
         id:3,
@@ -44,7 +45,7 @@ export const products=[
         Price:10000.0,
         Colour:["Black","Grey"],
         Image:car3,
-
+        quantity:0
      },
      {
         id:6,
@@ -52,7 +53,7 @@ export const products=[
         Price:10000.0,
         Colour:["Black","Grey"],
         Image:powerwall,
-
+        quantity:0
      }
 
 
