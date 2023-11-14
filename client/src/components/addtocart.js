@@ -1,20 +1,50 @@
 import React from 'react'
+import { useState,useEffect } from 'react'
 import { products } from '../products'
 import { Link } from 'react-router-dom'
 import { Fade } from 'react-reveal'
 import {loadStripe} from '@stripe/stripe-js';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { addToCart,removefromcart } from './redux/features/CartSlice'
+import { addToCart,removefromcart,decrement,emptycart} from './redux/features/CartSlice'
 const Addtocart = () => {
   const {carts}=useSelector((state)=>state.allCart)
-  console.log(carts)
+  // console.log(carts)
+  const [totalprice,settotalprice]=useState(0);
+  const [totq,settotq]=useState(0);
+  const total=()=>{
+    let totalprice=0
+    carts.map((iterator)=>{
+        totalprice+=(iterator.Price*iterator.quantity);
+    })
+    settotalprice(totalprice*0.005+totalprice);
+  }
+  useEffect(()=>{
+     total();
+  },[total])
+  const total_q=()=>{
+    let totq=0;
+    carts.map((iterator_1)=>{
+       totq+=(iterator_1.quantity);
+    })
+    settotq(totq);
+  }
+  useEffect(()=>{
+     total_q();
+  },[total_q])
+
   const dispatch=useDispatch();
   const increment=(e)=>{
     dispatch(addToCart(e))
   }
   const remove=(e)=>{
     dispatch(removefromcart(e))
+  }
+  const minus=(e)=>{
+    dispatch(decrement(e))
+  }
+  const remove_all=()=>{
+    dispatch(emptycart())
   }
   //cosoling cart items
    //payment gateway integration
@@ -48,9 +78,7 @@ const Addtocart = () => {
             <div className='card-header-flex'>
               <h5 className='text-white m-0'>Cart Calculation{carts.length >0 ? `(${carts.length})` : ""}</h5>
               {carts.length > 0 ? (
-                <button className='btn btn-danger mt-0 btn-sm' >
-                  <i className='fa fa-trash-alt mr-2'></i><span>EmptyCart</span>
-                </button>
+                <button onClick={remove_all} className="bg-white cursor-pointer ml-[50vh] mt-16 text-black rounded-sm " >Empty Cart</button>
               ) : ""}
             </div>
           </div>
@@ -92,12 +120,9 @@ const Addtocart = () => {
                       <td><div className='product-name'><p>{data.Name}</p></div></td>
                       <td>{data.Price}</td>
                       <td>
-                        <div className="prdct-qty-container">
+                        <div className="flex space-x-2">
                           <button onClick={()=>increment(data)} className='p-2 rounded-sm bg-white text-black  '>+</button>
-                          <input type="text" className='qty-input-box'  disabled name="" id="" />
-                          <button className='prdct-qty-btn' type='button' >
-                            <i className='fa fa-plus'></i>
-                          </button>
+                          <button onClick={data.quantity<=1?()=>remove(data.id):()=>minus(data)} className='p-2 rounded-sm bg-white text-black' >-</button>
                         </div>
                       </td>
                       <td className='text-white'>{data.quantity}</td>
@@ -107,10 +132,10 @@ const Addtocart = () => {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>&nbsp;</th>
+                    <th></th>
                     <th colSpan={3}></th>
-                    <th>Items In Cart <span className='ml-2 mr-2'>:</span><span className='text-danger'></span></th>
-                    <th className='text-right'>Total Price<span className='ml-2 mr-2'>:</span><span className='text-danger'>₹ </span></th>
+                    <th>Items In Cart <span className='ml-2 mr-2'>:</span><span className='text-danger'>{totq}</span></th>
+                    <th className='text-right'>Total Price<span className='ml-2 mr-2'>:</span><span className='text-danger'>${totalprice} </span></th>
                   </tr>
                 </tfoot>
               </table>
