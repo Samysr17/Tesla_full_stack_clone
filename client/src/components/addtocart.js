@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-import { products } from '../products'
-import { Link } from 'react-router-dom'
+
+
 import { Fade } from 'react-reveal'
 import {loadStripe} from '@stripe/stripe-js';
 import { useSelector } from 'react-redux'
@@ -47,28 +47,33 @@ const Addtocart = () => {
     dispatch(emptycart())
   }
   //cosoling cart items
-   //payment gateway integration
-  // const payment=async()=>{
-  //   const stripe = await loadStripe('pk_test_51OB9TcSB3m3uX235oYnbAGt7I1TflMXxSLco872UxB27EUY0KqPVTnXHR9z8V5OxPbeV0ZQpYz7rWDY7UKsTPriH005xaPamUu');
-  //   const body={
-  //     product:subtotal+(subtotal*0.05)
-  //   }
-  //   const headers={
-  //     "Content-Type":"application/json"
-  //   }
-  //   const response=await fetch("http://localhost:7000/api/create-checkout-session",{
-  //     method:"POST",
-  //     headers:headers,
-  //     body:JSON.stringify(body)
-  //   });
-  //   const session=await response.json();
-  //   const result=stripe.redirectToCheckout({
-  //     sessionId:session.id
-  //   })
-  //   if(result.error){
-  //     console.log(result.error)
-  //   }
-  // }
+   //payment gateway integration\
+   //
+   const payment = async()=>{
+    const stripe = await loadStripe("pk_test_51OB9TcSB3m3uX235oYnbAGt7I1TflMXxSLco872UxB27EUY0KqPVTnXHR9z8V5OxPbeV0ZQpYz7rWDY7UKsTPriH005xaPamUu");
+
+    const body = {
+        products:carts
+    }
+    const headers = {
+        "Content-Type":"application/json"
+    }
+    const response = await fetch("http://localhost:7000/api/create-checkout-session",{
+        method:"POST",
+        headers:headers,
+        body:JSON.stringify(body)
+    });
+
+    const session = await response.json();
+
+    const result = stripe.redirectToCheckout({
+        sessionId:session.id
+    });
+    
+    if(result.error){
+        console.log(result.error);
+    }
+}
   return (
     <>
     <div className='row justify-content-center m-0 bg-black text-white h-screen'>
@@ -141,6 +146,7 @@ const Addtocart = () => {
               </table>
             )}
           </div>
+          <button onClick={payment} className="bg-white text-black p-2">Checkout</button>
         </div>
       </div>
     </div>
