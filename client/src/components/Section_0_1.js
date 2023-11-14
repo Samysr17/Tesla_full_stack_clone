@@ -1,18 +1,15 @@
 import React from 'react'
-import {useContext} from 'react'
 import Fade from 'react-reveal'
 import game from './images/new-interior.jpg'
 import con from './images/connected.jpg'
 import vdo from './images/video2.webm'
 import m_1 from './vdo_3.webm'
 import {Link} from "react-router-dom";
-import { Addtocart_context } from '../context/addtocart-context'
 import {addToCart} from './redux/features/CartSlice'
 import { useDispatch } from 'react-redux'
 import { products } from '../products'
 
 const Section_0_1 = () => {
-  const {addtocart} =useContext( Addtocart_context);
   const dispatch=useDispatch();
   const send=(e)=>{
     // console.log(e)

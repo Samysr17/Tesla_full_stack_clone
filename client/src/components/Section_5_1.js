@@ -1,11 +1,15 @@
 import React from 'react'
-import { useContext } from 'react'
 import Fade from 'react-reveal'
 import panel_img from './panel_img.avif'
 import {Link} from 'react-router-dom'
-import { Addtocart_context } from '../context/addtocart-context'
+import {addToCart} from './redux/features/CartSlice'
+import { useDispatch } from 'react-redux'
+import { products } from '../products'
 const Section_5_1 = () => {
-  const {addtocart} =useContext( Addtocart_context);
+  const dispatch=useDispatch();
+  const send=(e)=>{
+    dispatch(addToCart(e))
+  }
   return (
     <div>
     <div  className="section_5_1 bg-no-repeat h-screen w-screen font-sans bg-cover bg-center flex-col">
@@ -73,7 +77,7 @@ const Section_5_1 = () => {
         <h1 className='text-white text-xl w-screen  md:text-3xl'>Transform Your Energy</h1>
         </Fade>
         <Fade right>
-        <button onClick={()=>addtocart(6)} className="bg-transparent w-[50vw]  mt-8 border-white border-4 hover:ease-in duration-300 md:hover:w-[35%] w-50vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm"><Link to="/addtocart" >Order Now</Link></button>
+        <button onClick={()=>send(products[5])} className="bg-transparent w-[50vw]  mt-8 border-white border-4 hover:ease-in duration-300 md:hover:w-[35%] w-50vh  md:w-[50%] p-2  text-white hover:bg-white hover:text-black  rounded-sm"><Link to="/addtocart" >Order Now</Link></button>
         </Fade>
         <Fade left>
         <button className="bg-gray-600 w-[50vw]  opacity-75 hover:opacity-100 mt-8 text-white hover:ease-in duration-300 md:hover:w-[35%] border-4 border-gray-600  md:w-[50%] p-2   rounded-sm">Schedule a Virtual Consultation</button>
