@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useState,useEffect} from 'react'
 import { Fade } from 'react-reveal'
 import {loadStripe} from '@stripe/stripe-js';
 import { useSelector } from 'react-redux'
@@ -30,7 +30,7 @@ const Addtocart = () => {
   useEffect(()=>{
      total_q();
   },[total_q])
-
+  // console.log(carts)
   const dispatch=useDispatch();
   const increment=(e)=>{
     dispatch(addToCart(e))
@@ -67,16 +67,19 @@ const Addtocart = () => {
     const result = stripe.redirectToCheckout({
         sessionId:session.id
     });
-    
+    // console.log(result)
+    // console.log(session.id)
     if(result.error){
         console.log(result.error);
     }
 }
+  // console.log(carts);
   return (
     <>
     <div className='bg-black text-white h-screen'>
       <div className='s'>
         <div className="">
+        <Fade left>
           <div className="card-header bg-dark p-3">
             <div className='card-header-flex'>
               <h5 className='text-white m-0'>{carts.length >0 ? `(${carts.length})` : ""}</h5>
@@ -85,16 +88,21 @@ const Addtocart = () => {
               ) : ""}
             </div>
           </div>
+          </Fade >
+
           <div className="card-body p-0">
             {carts.length === 0 ? (
+               <Fade left>
                  <div className='flex justify-center mt-[25vh] text-3xl'>
                  <p>Your Cart Is Empty!!!</p>
                 </div>
+                </Fade>
             ) : (
               <div className='flex flex-col justify-center'>
                 <div>
                   {carts.map((data) => (
                     <div className="flex justify-between h-[25%] w-[60%] ml-[20%] ">
+                      <Fade left>
                       <div>
                         <button onClick={()=>remove(data.id)} className='text-black bg-white rounded-sm p-1'>remove</button>
                       </div>
@@ -109,16 +117,20 @@ const Addtocart = () => {
                       </div>
                       <td className='text-white'>{data.quantity}</td>
                       <td className='text-white'>${data.Price*data.quantity}</td>
+                      </Fade>
                     </div>
                   ))}
+              
                 </div>
-                <tfoot>
+                <Fade right>
+                <div>
                   <tr className="flex justify-between ml-[20%] w-[60%]">
                     <th>Items In Cart <span className='ml-2 mr-2'>:</span><span className='text-danger'>{totq}</span></th>
                     <th className='text-right'>Total Price<span className='ml-2 mr-2'>:</span><span className='text-danger'>${totalprice} </span></th>
                     <button onClick={payment} className="bg-white text-black p-2">Checkout</button>
                   </tr>
-                </tfoot>
+                </div>
+                </Fade>
               </div>
             )}
           </div>

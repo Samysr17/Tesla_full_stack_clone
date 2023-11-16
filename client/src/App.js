@@ -43,7 +43,7 @@ function App() {
         ,<Section4/>
         ,<Section5/>]}/>
         <Route path="/Model_S" element={<Home2/>}/>
-        <Route path="/Success" element={<Success/>}/>
+        <Route path="/success" element={<Success/>}/>
         <Route path="/Failure" element={<Failure/>}/>
         <Route path="/SignIn" element={<Signin/>} />
         <Route path="/SignUp" element={<SignUp/>} />
