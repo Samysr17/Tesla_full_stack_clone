@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 import { addToCart,removefromcart,decrement,emptycart} from './redux/features/CartSlice'
 const Addtocart = () => {
   const {carts}=useSelector((state)=>state.allCart)
-  // console.log(carts)
+  console.log(carts)
   const [totalprice,settotalprice]=useState(0);
   const [totq,settotq]=useState(0);
   const total=()=>{

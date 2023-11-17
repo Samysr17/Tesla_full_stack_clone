@@ -18,10 +18,10 @@ import Home5 from './components/Home5';
 // import { Authi_email_contextProvider } from './context/Authi_email_context'
 import Signin from './components/Signin';
 import Home1 from './components/Home1';
-import Success from './components/success';
 import Failure from './components/failure';
 import Home3 from './components/Home3';
 import Home0 from './components/Home0';
+import Success_1 from './Success_1';
 import Home_cart  from './Home_cart';
 import { Addtocart_contextProvider } from './context/addtocart-context';
 import SignUp from './components/SignUp';
@@ -43,7 +43,7 @@ function App() {
         ,<Section4/>
         ,<Section5/>]}/>
         <Route path="/Model_S" element={<Home2/>}/>
-        <Route path="/success" element={<Success/>}/>
+        <Route path="/success" element={<Success_1/>}/>
         <Route path="/Failure" element={<Failure/>}/>
         <Route path="/SignIn" element={<Signin/>} />
         <Route path="/SignUp" element={<SignUp/>} />
