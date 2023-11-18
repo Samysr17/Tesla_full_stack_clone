@@ -3,7 +3,7 @@ const Success_1 = () => {
   // console.log("hello")
   return (
     <>
-    <div  className="bg-black h-screen w-screen" >
+    <div  className="bg-black h-screen w-screen !!!" >
     <div className="text-white">
        Thank u for Choosing Tesla
     </div>

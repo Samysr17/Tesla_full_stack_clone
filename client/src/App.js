@@ -27,6 +27,7 @@ import { Addtocart_contextProvider } from './context/addtocart-context';
 import SignUp from './components/SignUp';
 import { AuthContextProvider } from './context/AuthContext';
 import protected_route from './protected_route'
+import Admin_login from './components/admin_login';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/Solar_Panels" element={<Home1/>}/>
         <Route path="/Model_Y" element={<Home3/>}/>
         <Route path="/Model_X" element={<Home0/>}/>
+        <Route path="/admin_login" element={<Admin_login/>}/>
         <Route path="/addtocart" element={<protected_route><Home_cart/></protected_route>}/>
       </Routes>
       </Addtocart_contextProvider>
