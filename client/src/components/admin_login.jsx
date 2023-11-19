@@ -9,7 +9,7 @@ const Admin_login = () => {
   const [ad_password,setad_password]=useState('');
   const [error,set_error]=useState('');
   const adm_login=()=>{
-
+    //userauth from firebase
   }
   return (
     <div className="flex bg-black h-screen w-screen ">
