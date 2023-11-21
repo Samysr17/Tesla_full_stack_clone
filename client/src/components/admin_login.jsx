@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import logo1 from './images/telsaw.png'
 import {Link} from 'react-router-dom'
- import { UserAuth } from '../context/AuthContext'
- import {navigate} from 'react-router-dom'
 
 const Admin_login = () => {
   // const {signin}=userAuth()
-  const [ad_email,setad_email]=useState('');
-  const [ad_password,setad_password]=useState('');
-  const [error,set_error]=useState('');
+  // const [ad_email,setad_email]=useState('');
+  // const [ad_password,setad_password]=useState('');
+  // const [error,set_error]=useState('');
   // const adm_login=async()=>{
   //   //userauth from firebase
   //   try{
@@ -30,9 +28,9 @@ const Admin_login = () => {
         <div className="mt-24 text-4xl ml-0" >Sign In</div>
         </div>
         <div className="mt-12 text-white">Email</div>
-        <div><input onChange={(e)=>setad_email(e.target.value)} placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
+        <div><input  placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
         <div className="mt-4 text-white">Password</div>
-        <div><input onChange={(e)=>setad_password(e.target.value)} placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
+        <div><input  placeholder=''type='text' className="p-3 bg-gray-200 border-2 border-gray-400 w-60 " ></input></div>
         <button className="mt-8 bg-blue-500 text-white p-2 w-60"><Link to="/SignUp">Sign In</Link></button>
         </div>
         <div className="flex justify-center mt-[40%] md:mt-[18%] md:space-x-12 space-x-4">

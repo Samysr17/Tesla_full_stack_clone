@@ -14,3 +14,6 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+//should always be unique
+//tried to implement firebase app in other but it was giving errors
+//will be doing using JWT tokens
