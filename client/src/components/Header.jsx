@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useContext } from 'react'
+import { useState} from 'react'
 // import logo from './images/logopng.png'
 import {AiOutlineClose} from 'react-icons/ai'
 import {HiOutlineMenuAlt4} from 'react-icons/hi'
@@ -8,37 +8,22 @@ import {Link} from "react-router-dom";
 import {UserAuth} from '../context/AuthContext'
 import {useNavigate} from 'react-router-dom'
 import { Addtocart_context } from '../context/addtocart-context';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 
 function Header(){
-  // const [color,setcolor]=useState[false]
-  // const changecolor=()=>{
-  //   if(window.scrollY>90){
-  //     setcolor(true)
-  //   }else{
-  //     setcolor(false)
-  //   }
-  // }
-  // window.addEventListener('scroll',changecolor)
-const[nav,setnav]=useState(false);
-const handlenav=()=>{
-setnav(!nav)
-}
-const[menu,setmenu]=useState(false);
-const handlemenu=()=>{
+
+  const {loginWithRedirect,logout,user, isAuthenticated} = useAuth0();
+  const[nav,setnav]=useState(false);
+  const handlenav=()=>{
+  setnav(!nav)
+ }
+  const[menu,setmenu]=useState(false);
+  const handlemenu=()=>{
   setmenu(!menu)
 }
-const {user,logout}=UserAuth();
-const navigate=useNavigate();
-const handlelogout=async()=>{
-  try{
-    await logout()
-    console.log("logged out")
-    navigate('/SignIn')
-  }catch(e){
-    console.log(e.message)
-  }
-}
+
   
   return (
     <div>
@@ -58,8 +43,19 @@ const handlelogout=async()=>{
         </div>
         <div className='hidden lg:flex mr-6 text-gray-400 cursor-pointer '>
           {/* <a href='https://shop.tesla.com/'><p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Shop</p></a> */}
-          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">{user && user.email}</p>
-          <p  onClick={handlelogout} className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Log Out</p>
+          <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "></p>
+          { isAuthenticated ?(
+          <p  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Log Out</p>)
+          :(
+            <p  onClick={()=>loginWithRedirect()} className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Log In</p>
+          )
+        }
+          {isAuthenticated && (
+        <div className='flex '>
+          <img className='mr-2  h-6' src={user.picture} alt={user.name} />
+        <h2 className='mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl'> {user.name} </h2>
+        
+       </div>)}
           <p className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl "><Link to="/addtocart">Cart</Link> ()</p>
           <p  onClick={handlemenu}  className="mr-4  hover:ease-in duration-300 hover:text-white hover:text-xl ">Menu</p>
           <div onClick={handlemenu} className={menu?"right-0 top-0 absolute  backdrop-blur-3xl text-white w-[25%]  px-4 py-7 flex flex-col h-screen  ml-0":"absolute left-[-100%]"}>

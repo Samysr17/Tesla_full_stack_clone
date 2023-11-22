@@ -22,13 +22,12 @@ import Failure from './components/failure';
 import Home3 from './components/Home3';
 import Home0 from './components/Home0';
 import Success_1 from './Success_1';
+import Admin from './components/admin';
 import Home_cart  from './Home_cart';
 import { Addtocart_contextProvider } from './context/addtocart-context';
 import SignUp from './components/SignUp';
 import { AuthContextProvider } from './context/AuthContext';
 import protected_route from './protected_route'
-import Admin_login from './components/admin_login';
-
 
 function App() {
   return (
@@ -46,15 +45,15 @@ function App() {
         <Route path="/Model_S" element={<Home2/>}/>
         <Route path="/success" element={<Success_1/>}/>
         <Route path="/Failure" element={<Failure/>}/>
-        <Route path="/SignIn" element={<Signin/>} />
-        <Route path="/SignUp" element={<SignUp/>} />
+        <Route path="/Admin_SignUp" element={<SignUp/>} />
         <Route path="/Solar_Roofs" element={<Home4/>}/>
         <Route path="/Powerwall" element={<Home5/>}/>
         <Route path="/Solar_Panels" element={<Home1/>}/>
         <Route path="/Model_Y" element={<Home3/>}/>
         <Route path="/Model_X" element={<Home0/>}/>
-        <Route path="/admin_login" element={<Admin_login/>}/>
+        <Route path="/admin_login" element={<Signin/>}/>
         <Route path="/addtocart" element={<protected_route><Home_cart/></protected_route>}/>
+        <Route path="/Admin" element={<protected_route><Admin/></protected_route>}/>
       </Routes>
       </Addtocart_contextProvider>
       </AuthContextProvider>

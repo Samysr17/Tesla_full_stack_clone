@@ -32,7 +32,7 @@ const Signup = () => {
         }
        
       )
-      navigate('/')
+      navigate('/Admin')
     } catch (e) {
       setError(e.message);
       window.alert(e.message)
