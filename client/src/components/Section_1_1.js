@@ -9,6 +9,7 @@ import { products } from '../products'
 
 const Section_1_1 = () => {
   const dispatch=useDispatch();
+
   const send=(e)=>{
     dispatch(addToCart(e))
   }
