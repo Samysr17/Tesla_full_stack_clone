@@ -29,9 +29,19 @@ app.post("/api/create-checkout-session",async(req,res)=>{
         payment_method_types:["card"],
         line_items:lineItems,
         mode:"payment",
-        success_url:"http://localhost:3000/success",
+        success_url:"http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}",
         cancel_url:"http://localhost:3000/cancel",
     });
+    app.get('/success', async (req, res) => {
+        const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+        const customer = await stripe.customers.retrieve(session.customer);
+      
+        res.send(`<html>
+        <body><h1>Thanks for your order, ${customer.name}!</h1>
+        <button>Complete Order</button>
+        </body>
+        </html>`);
+      });
 
     res.json({id:session.id})
     // console.log(session.id)

@@ -50,10 +50,10 @@ const Addtocart = () => {
   //cosoling cart items
    //payment gateway integration\
    //
-   const data=carts;
-   const handleclick=()=>{
-     navigate("/success",{state:data})
-   }
+  //  const data=carts;
+  //  const handleclick=()=>{
+  //    navigate("/success",{state:data})
+  //  }
    const payment = async()=>{
     const stripe = await loadStripe("pk_test_51OB9TcSB3m3uX235oYnbAGt7I1TflMXxSLco872UxB27EUY0KqPVTnXHR9z8V5OxPbeV0ZQpYz7rWDY7UKsTPriH005xaPamUu");
 
@@ -134,7 +134,7 @@ const Addtocart = () => {
                   <tr className="flex justify-between ml-[20%] w-[60%]">
                     <th>Items In Cart <span className='ml-2 mr-2'>:</span><span className='text-danger'>{totq}</span></th>
                     <th className='text-right'>Total Price<span className='ml-2 mr-2'>:</span><span className='text-danger'>${totalprice} </span></th>
-                    <button onClick={handleclick} className="bg-white text-black p-2">Checkout</button>
+                    <button onClick={payment} className="bg-white text-black p-2">Checkout</button>
                   </tr>
                 </div>
                 </Fade>

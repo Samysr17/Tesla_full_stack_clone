@@ -14,7 +14,7 @@ const Success_1 = () => {
     </div>
     <div className="text-white">Order placed</div>
     
-    <div>
+    {/* <div>
                   {data.map((it) => (
                     <div className="flex justify-between h-[25%] w-[60%] ml-[20%] ">
                       <div>
@@ -26,7 +26,7 @@ const Success_1 = () => {
                       <td className='text-white'>${it.Price*it.quantity}</td>
                     </div>
                   ))}
-                </div>
+                </div> */}
                 </div>
     </>
   )
