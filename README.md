@@ -1,4 +1,6 @@
 admin 
+95% completed
+//fixing bugs:)
 # Getting Started with Create React App 
 ![image](https://github.com/Samysr17/Tesla_full_stack_clone/assets/108344579/41c59223-ff9b-412f-8c49-a26f852ade7d)
 ![image](https://github.com/Samysr17/Tesla_full_stack_clone/assets/108344579/491f2fbc-896b-453e-a40e-5d1f014c2b66)
